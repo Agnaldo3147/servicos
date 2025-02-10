@@ -1,0 +1,131 @@
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .banner h1 {
+        font-size: 1.25rem;
+    }
+
+    .cta-button {
+        font-size: 0.75rem;
+        padding: 8px 16px;
+    }
+
+    .service-info h3 {
+        font-size: 1rem;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 0.875rem;
+    }
+
+    button {
+        font-size: 0.875rem;
+        padding: 10px 20px;
+    }
+
+    .social-icon {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .HeaderVerPedido {
+        display: flex !important;
+    }
+    #pedidoMobile {
+        display: none !important;
+    }
+    .Menu a span{
+        color: #000000;
+        font-size: 2.1em;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+    aside {
+        top: 0;
+        left: -420px;
+        width: 320px;
+        height: 100vh;
+    }
+    #contactForm {
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .Login {
+        width: 70px;
+        border-radius: 13px;
+    }
+
+    .Login a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 0.875rem;
+        padding: 10px 20px;
+    }
+
+    .service img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        object-position: center;
+        border-bottom: 3px solid #00f;
+    }
+
+    .services h2, .location h2, .testimonials h2, .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-info h3 {
+        font-size: 1.25rem;
+    }
+
+    #map_service {
+        height: 450px;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .Login {
+       margin-right: 15px;
+    }
+    #Menu {
+        display: none;
+    }
+   
+   
+}
+
+

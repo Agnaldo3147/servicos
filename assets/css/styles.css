@@ -1,0 +1,414 @@
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    margin-bottom: 20px;
+    height: 50px;
+    padding: auto;
+    z-index: 8;
+    background-color: transparent;
+}
+
+.Logo {
+    margin-left: 8px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.ContainerLoginMenu {
+    margin-right: 8px;
+    gap: 8px;
+}
+
+.HeaderVerPedido {
+
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none !important;
+}
+.HeaderVerPedido p{
+    margin-top: 16px !important;
+    font-size: .8em;
+    color: #FFFFFF;
+}
+
+.Login {
+    width: 60px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.Login a {
+    color: #FFFFFF;
+    font-size: .9em;
+}
+
+.Menu a {
+    color: #FFFFFF;
+    font-size: .9em;
+}
+.Menu a span{
+    color: #FFFFFF;
+    font-size: .9em;
+}
+
+main {
+    position: relative;
+    left: 0;
+}
+
+
+/* Banner Principal */
+.banner {
+    position: relative;
+    background: url('../img/img_fundo.jpeg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+    position: relative;
+    top: 60px;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 98%;
+}
+
+.cta-button {
+    background: #00f;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    background: #005bb5;
+}
+
+/* Seção de Serviços */
+.services {
+    padding: 60px 20px;
+    background: #fff;
+    transition: .3s ease-in-out;
+}
+
+.style-mouse {
+    transform: scale(1.2) !important;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000;
+    font-size: 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.service img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 3px solid #00f;
+}
+
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.service-info p {
+    color: #666;
+}
+
+/* Seção de Localização */
+.location {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.location h2 {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 2rem;
+}
+
+#map_service {
+    width: 100%;
+    height: 390px;
+    background: #ddd;
+    margin: 20px 0;
+    z-index: 1;
+}
+
+button[type = 'button'] {
+    background: #00f;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+/* Seção de Testemunhos */
+.testimonials {
+    padding: 60px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 2rem;
+}
+
+.testimonial {
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Seção de Contato */
+.contact {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background: #00f;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background: #005bb5;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Rodapé */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer nav {
+    margin-bottom: 10px;
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+    color: #00f;
+}
+
+.social-media {
+    margin: 10px 0;
+}
+
+.social-icon {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.25rem;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #00f;
+}
+
+p {
+    margin: 0;
+}
+
+
+/*VERSÃO MOBILE DO MEU PEDIDO*/
+
+#pedidoMobile {
+    position: absolute;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.274);
+    z-index: 12;
+}
+
+/*ESTILIZANDO O MEU MENU*/
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -110vh;
+    right: -110vw;
+    position: fixed;
+    z-index: 1110;
+    background-color: #f0f2f5;
+    /*
+    background-color: rgb(135, 206, 235);
+    */
+    width: 100vw;
+    height: 100vh;
+}
+
+.ContainerOptionsMenu li {
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.098);
+}
+
+
+.ContainerOptionsMenu li:hover {
+    background-color: lightgrey;
+}
+
+
+
+/*CLASSES PARA ACTIVAR POR JAVASCRIPT*/
+.EnterMenu700 {
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 10 !important;
+}
+.EnterMenu {
+    top: 0 !important;
+    right: 0 !important;
+
+}
+
+.display-block {
+    display: block !important;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.overflow-y {
+    overflow-y: hidden !important;
+}

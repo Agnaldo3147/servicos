@@ -1,0 +1,614 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+}
+
+:root{
+    --Preto: #000000;
+    --Cinza: #808080;
+    --cinza-claro: #D3D3D3 ;
+    --Bege: #F5F5DC;
+    --Branco: #FFFFFF;
+    --Azul-Marinho: #003366;
+    --Azul-Escuro: #001325;
+    --Bordô: #800000;
+    --Vinho: #4B0082;
+    --Verde_Escuro: #006400;
+    --Azul_Claro: #ADD8E6;
+    --Dourado: #FFD700;
+    --Vermelho: #FF0000;
+    --Laranja: #FFA500;
+    --Verde_Limão: #00FF00;
+}
+
+html
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.alert-icon {
+    font-size: 1em; /* Tamanho do ícone */
+    color: #FF0000; /* Cor do ícone de alerta */
+    animation: pulse 1s infinite; /* Animação */
+    z-index: 12;
+}
+
+/* Animação de pulsar */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+.Cor-Espera {
+    background-color: rgb(255, 221, 51);
+}
+.Azul-Login {
+    background-color: rgb(0, 120, 215);
+}
+
+.Verde-Login {
+    background-color: rgb(63, 191, 127);
+}
+
+.color-branco
+{
+    color: #FFFFFF;
+}
+
+.Preto
+{
+    background-color: #000000;
+}
+.PretoClaro
+{
+    background-color: #000000e8;
+}
+.Cinza
+{
+    background-color: #808080;
+}
+.Cinza-Claro
+{
+    background-color: #D3D3D3;
+}
+.Verde-Limão
+{
+    background-color: #00FF00;
+}
+.Vinho
+{
+    background-color: #4B0082;
+}
+.Bordô
+{
+    background-color: #800000;
+}
+.Azul-Marinho
+{
+    background-color: #003366;
+}
+.Azul-Escuro
+{
+    background-color: #001325;
+}
+.Vinho
+{
+    background-color: #4B0082;
+}
+.Verde-Escuro
+{
+    background-color: #006400;
+}
+.Azul-Claro
+{
+    background-color: #ADD8E6;
+}
+.Lightgrey {
+    background-color: lightgrey;
+}
+.Bege
+{
+    background-color: #F5F5DC;
+}
+.Vermelho
+{
+    background-color: #FF0000;
+}
+.Laranja
+{
+    background-color: #FFA500;
+}
+.Dourado
+{
+    background-color: #FFD700;
+}
+.Branco
+{
+    background-color: #FFFFFF;
+}
+
+.CorBodyClaro
+{
+    background-color: #4f0202;
+}
+.CorBody
+{
+    background-color: #210101;
+}
+
+.Text-Color-Verde-Escuro
+{
+    background-color: #006400;
+}
+
+.Text-Color-Vermelho
+{
+    color: #FF0000;
+}
+.Text-Color-Preto
+{
+    color: #000000;
+}
+.Text-Color-Ouro
+{
+    color: #FFD700;
+}
+.Text-Color-Vere-Limão
+{
+    color: #00FF00;
+}
+.Text-Color-Prata
+{
+    color: #C0C0C0;
+}
+.Text-Color-Bronze
+{
+    color: #CD7F32;
+}
+.Text-Color-Ouro
+{
+    color: #FFD700;
+}
+.Text-Color-Branco
+{
+    color: #FFFFFF;
+}
+.Text-Color-Azul
+{
+    color: blue;
+}
+.Text-Color-Laranja
+{
+    color: #FFA500;
+}
+.Text-Color-Cinza-Claro
+{
+    color: #D3D3D3;
+}
+
+
+.center
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.center-wrap
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.center-align
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.center-coluna-justify
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.center-coluna-align
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.center-space-between
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.center-coluna
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.Hover:hover {
+    background-color: var(--cinza-claro);
+}
+
+.gap10{
+    gap: 10px;
+}
+.gap20{
+    gap: 20px;
+}
+.gap30{
+    gap: 30px;
+}
+.gap08{
+    gap: 8px;
+}
+.gap09{
+    gap: 9px;
+}
+.gap05{
+    gap: 5px;
+}
+
+.text-align-left {
+    text-align: left;
+}
+.text-align-start {
+    text-align: start;
+}
+.text-align-end {
+    text-align: end;
+}
+.text-align-center {
+    text-align: center;
+}
+.cursor
+{
+    cursor: pointer;
+}
+.display-flex
+{
+    display: flex;
+}
+.display-none
+{
+    display: none;
+}
+.margin-left10
+{
+    margin-left: 10px;
+}
+.margin-left15
+{
+    margin-left: 15px;
+}
+.margin-left20
+{
+    margin-left: 15px;
+}
+.margin-left5
+{
+    margin-left: 5px;
+}
+.margin-left9
+{
+    margin-left: 9px;
+}
+.margin-left8
+{
+    margin-left: 8px;
+}
+.margin-rigth10
+{
+    margin-right: 10px;
+}
+.margin-rigth5
+{
+    margin-right: 5px;
+}
+.margin-rigth9
+{
+    margin-right: 9px;
+}
+.margin-rigth8
+{
+    margin-right: 8px;
+}
+.border-radius50
+{
+    border-radius: 50%;
+}
+.border-radius05
+{
+    border-radius: 5px;
+}
+.border-radius10
+{
+    border-radius: 10px;
+}
+.heigth100vh {
+    height: 100vh;
+}
+.heigth01{
+    height: 1px;
+}
+.heigth02{
+    height: 2px;
+}
+.heigth200px{
+    height: 200px;
+}
+.heigth20{
+    height: 20%;
+}
+.heigth30{
+    height: 30%;
+}
+.heigth40{
+    height: 40%;
+}
+.heigth70{
+    height: 70%;
+}
+.width100vw
+{
+    width: 100vw;
+}
+.width10
+{
+    width: 10%;
+}
+.width20
+{
+    width: 20%;
+}
+.width30
+{
+    width: 30%;
+}
+.width40
+{
+    width: 40%;
+}
+.width50
+{
+    width: 50%;
+}
+.width70
+{
+    width: 70%;
+}
+.width80
+{
+    width: 80%;
+}
+.width90
+{
+    width: 90%;
+}
+.width100
+{
+    width: 100%;
+}
+
+.width50px {
+    width: 50px;
+}
+.width100px {
+    width: 100px;
+}
+.width200px {
+    width: 200px;
+}
+.width300px {
+    width: 300px;
+}
+
+.padding08
+{
+    padding: 8px;
+}
+.padding09
+{
+    padding: 9px;
+}
+.padding10
+{
+    padding: 10px;
+}
+.padding05
+{
+    padding: 5px;
+}
+.padding03
+{
+    padding: 3px;
+}
+.padding02
+{
+    padding: 2px;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.font-size2 {
+    font-size: 2em;
+}
+.font-size11 {
+    font-size: 1.1em;
+}
+.font-size12 {
+    font-size: 1.2em;
+}
+.font-size13 {
+    font-size: 1.3em;
+}
+.font-size14 {
+    font-size: 1.4em;
+}
+.font-size15 {
+    font-size: 1.5em;
+}
+.font-size17 {
+    font-size: 1.7em;
+}
+.font-size19 {
+    font-size: 1.9em;
+}
+.font-size20 {
+    font-size: 2em;
+}
+.font-size1 {
+    font-size: 1em;
+}
+.font-size09 {
+    font-size: .9em;
+}
+.font-size08 {
+    font-size: .8em;
+}
+.font-size07 {
+    font-size: .7em;
+}
+.font-size06 {
+    font-size: .6em;
+}
+.font-size05 {
+    font-size: .5em;
+}
+
+.opacity25
+{
+    opacity: .25;
+}
+.opacity50
+{
+    opacity: .50;
+}
+.opacity75
+{
+    opacity: .75;
+}
+.opacity90
+{
+    opacity: .90;
+}
+.opacity100
+{
+    opacity: 1;
+}
+
+.border-bottom-azul{
+    
+}
+
+.box-shadow {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.098);
+}
+
+.border-collapse
+{
+    border-collapse: collapse;
+}
+
+tr, td, th {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.285);
+}
+.over-y {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.hidden-x {
+    overflow-x: hidden;
+}
+
+/*TELA DE CARREGAMENTO*/
+
+
+.ContainerSpinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.365);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.ContainerSpinner .spinner {
+   height: 40px;
+   width: 40px;
+   border-top-left-radius: 50%;
+   border-bottom-left-radius: 50%;
+   border-bottom-right-radius: 50%;
+   border-left: 4px solid blue;
+   border-bottom:  4px solid blue;
+}
+
+/*TAMANHO DAS LETRAS DAS MENSAGENS DO JBOX*/
+.jBox-Notice {
+    text-align: center; /* Centraliza o texto dentro da jBox */
+  }
+  .jBox-Notice.jBox-Notice-top {
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important; /* Centraliza horizontalmente */
+    position: fixed !important;
+    width: auto; /* Ajusta a largura automática conforme o conteúdo */
+  }
+
+/*CLASSE PARA OFUSCAR A TELA*/
+
+.OfuscarTela {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 9;
+    background-color: #000000ea;
+    opacity: .90;
+    display: none;
+}
+
