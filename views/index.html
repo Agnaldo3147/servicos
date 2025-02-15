@@ -214,19 +214,7 @@
                 <a href="{{url('')}}" class="center order-link Text-Color-Preto font-weight-bold">Página inicial</a>
                 <span class="material-icons order-span">home</span>
             </li>
-            <li class=" width70 cursorcenter border-bottom-azul center gap05 gap05">
-                <a href="{{url('admin/dashboard')}}" class="order-link center Text-Color-Preto font-weight-bold"
-                    target="_blank">Dashboard</a>
-                <span class="material-icons order-span">dashboard</span>
-            </li>
-            {% if usuario().id%}
-            <li class=" width70 cursor center border-bottom-azul gap05">
-                <a href="{{url('perfil/?'~ToLower(usuario().nome))}}"
-                    class="order-link center font-weight-bold Text-Color-Preto font-size08">Perfil</a>
-                <span class="material-icons order-span ">person</span>
-
-            </li>
-            {%endif%}
+           
             <li class=" width70 cursor center border-bottom-azul gap05">
                 <a href="{{url('servicos')}}"
                     class="center order-link font-weight-bold font-size08 Text-Color-Preto">Serviços</a>
