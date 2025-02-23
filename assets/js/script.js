@@ -2,7 +2,7 @@
 
 const SectionServicos = document.querySelector('.services')
 const header = document.querySelector('.header')
-const LinkMenu = document.querySelector('.LinkMenu')
+const LinkMenu = document.querySelector('#LinkMenu')
 
 class ControlHeader {
     constructor() {
@@ -12,11 +12,11 @@ class ControlHeader {
     control() {
         if(SectionServicos.getBoundingClientRect().top < 50) {
             header.style = 'background-color: #FFFFFF; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.299);'
-            LinkMenu.style = 'color: #000000;'
+            LinkMenu.style = 'color: #000000 !important;'
             
         } else {
             header.style = 'background-color: transparent'
-            LinkMenu.style = 'color: #FFFFFF;'
+            LinkMenu.style = 'color: #FFFFFF !important;'
         }
     }
 }
@@ -123,8 +123,8 @@ function erro(error) {
     console.log(error)
 }
 
-//Obtendo a tua localização
 /*
+//Obtendo a tua localização
 var whatID = navigator.geolocation.getCurrentPosition(sucesso, erro, {
     timeout: 5000,
     enableHighAccuracy: true
@@ -147,7 +147,7 @@ const ContainerSpinner = document.querySelector('.ContainerSpinner')
 
 $(document).ready(function () { 
 
-    $('#pedidoMobile').on('click',function () { 
+    $('#pedidoMobile').on('click',function (e) { 
 
         e.preventDefault()
         $.ajax({
