@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Help</title>
+    <!--LINKS CRIADOS POR MIM-->
+    <link rel="stylesheet" href="links.css">
+    <link rel="stylesheet" href="../assets/css/stylesglobais.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/query/styles.css">
+    <link rel="stylesheet" href="../assets/css/stylesglobais.css">
+    <!--TERMINAM AQUI-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+     <!--LINK DO BOOTSTRAP-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+     crossorigin="anonymous"></script>
+
+     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+   
+   
+    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
+
+</head>
+
+<body class="body" id="body">
+
+    <header class="header">
+        <a href="#" class="Logo">
+            <h2 class="Text-Color-Azul"><strong>Help</strong></h2>
+        </a>
+        <div class="ContainerLoginMenu gap05 center">
+            <!--
+            {% if usuario().id %}
+            <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido"
+                url-busca="{{url('redirecionar')}}">
+                <p class="display-block">Ver pedido</p>
+                <i class="fas fa-exclamation-triangle alert-icon"></i>
+            </div>
+            {%endif%}
+            {% if usuario().id %}
+            <div class=" Verde-Login padding03 font-size08 border-radius05 center">
+                <a href="{{url('perfil/?'~ToLower(usuario().nome))}}"
+                    class="Text-Color-Branco font-weight-bold ">{{TextoResumido(usuario().nome, 10) }}</a>
+            </div>
+            -->
+            <div class="Login Azul-Login center">
+                <a href="#">Login</a>
+            </div>
+
+            <div class="Menu center" id="Menu">
+                <a class="LinkMenu margin-rigth10 center cursor"><span class="material-icons" id="LinkMenu">menu</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner Principal -->
+        <section id="home" class="banner">
+            <div class="banner-overlay">
+                <div class="banner-content">
+                    <h1 class="center width100">Serviços de Qualidade no Conforto da Sua Casa</h1>
+                    <a href="#contact" class="cta-button">Fale connosco</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Serviços -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="services-grid">
+                    <a href="#" class="service">
+                        <img src="../assets/img/trancas_servicos01.jpeg" alt="Cabeleireiro">
+                        <div class="service-info">
+                            <h3>Cabeleireiro</h3>
+                            <p>Corte, coloração e tratamento de cabelos no seu endereço.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="service">
+                        <img src="../assets/img/cabelo.jpg" alt="Barbearia">
+                        <div class="service-info">
+                            <h3>Barbearia</h3>
+                            <p>Corte de cabelo e barba com técnicas modernas e tradicionais.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="service">
+                        <img src="../assets/img/pexel.webp" alt="Manicure/Pedicure">
+                        <div class="service-info">
+                            <h3>Manicure/Pedicure</h3>
+                            <p>Cuidados completos para mãos e pés com conforto e higiene.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="service">
+                        <img src="../assets/img/img(3).jpg" alt="Limpeza">
+                        <div class="service-info">
+                            <h3>Limpeza</h3>
+                            <p>Serviços de limpeza profunda para sua casa.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Localização -->
+        <section id="location" class="location">
+            <div class="container">
+                <h2>Onde Atuamos</h2>
+                <p>Oferecemos nossos serviços em diversas localidades, incluindo Catepa, Cidade (Centro) e outras áreas.
+                </p>
+                <div id="map_service" class="map">
+                    <img src="https://previews.123rf.com/images/schwabenblitz/schwabenblitz1611/schwabenblitz161100322/65424351-mapa-de-angola-como-uma-pe%C3%A7a-cinza-malanje-%C3%A9-destacado-em-vermelho.jpg" alt="">
+                </div>
+                <button type="button"  data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop" class="pt-2 pb-2">Verifique se Atendemos na Sua Região</button>
+            </div>
+        </section>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close center" data-bs-dismiss="modal" aria-label="Close">
+                            <span class="material-icons">close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr class="font-size09">
+                                    Locais desponíveis
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-size08">Catepa zona 5 e 6</td>
+                                    <td class="font-size08">Maxinde</td>
+                                    <td class="font-size08">Canânbua</td>
+                                    <td class="font-size08">Cidade (centro)</td>
+                                    <td class="font-size08">Encosta</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary pl-3 pr-3 pt-0 pb-0" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Testemunhos -->
+        <section id="about" class="testimonials">
+            <div class="container">
+                <h2>O que Nossos Clientes Dizem</h2>
+                <div class="testimonial">
+                    <p>"Excelente serviço! Muito prático e profissional." - Ana Silva</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Adorei o atendimento e a qualidade dos serviços." - João Pereira</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contact" class="contact">
+            <div class="container center-coluna">
+                <h2>Entre em Contato</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Telefone">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Mensagem" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div class="contact-info">
+                    <p>Telefone: (XX) XXXX-XXXX</p>
+                    <p>E-mail: contato@help.com</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#location">Localização</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="#" class="social-icon">FB</a>
+                <a href="#" class="social-icon">IG</a>
+                <a href="#" class="social-icon">TW</a>
+            </div>
+            <p>&copy; 2024 Help. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!--URL DO MEU PEDIDO PARA VERSÕES MOBILES-->
+
+    <div id="pedidoMobile" url-busca="{{url('redirecionar')}}" class="center">
+        <i class="fas fa-exclamation-triangle alert-icon"></i>
+    </div>
+
+    <!--ESTE É O MEU MENU-->
+
+    <aside class="gap30 " id="aside">
+        <div class="OutMenu center-space-between width100">
+            <h1 class=" margin-left20 Text-Color-Azul text-aglin-center">Help</h1>
+            <span id="span" class="material-icons margin-rigth10 text-aglin-center cursor">close</span>
+        </div>
+        <div class="ContainerOptionsMenu center-coluna width100 gap20">
+            <li class=" width70 cursorcenter border-bottom-azul center gap05">
+                <a href="{{url('')}}" class="center order-link Text-Color-Preto font-weight-bold">Página inicial</a>
+                <span class="material-icons order-span">home</span>
+            </li>
+
+            <li class=" width70 cursor center border-bottom-azul gap05">
+                <a href="{{url('servicos')}}"
+                    class="center order-link font-weight-bold font-size08 Text-Color-Preto">Serviços</a>
+                <span class="material-icons order-span">work</span>
+
+            </li>
+            <li class=" width70 cursor center border-bottom-azul gap05">
+                <a href="#" class="center order-link font-weight-bold font-size08 Text-Color-Preto">Sobre</a>
+                <span class="material-icons order-span ">info</span>
+
+            </li>
+            <li class=" width70 cursor center border-bottom-azul gap05">
+                <a href="#" class="center order-link font-weight-bold font-size08 Text-Color-Preto">Termos</a>
+                <span class="material-icons order-span">description</span>
+
+            </li>
+            <li class=" width70 cursor center border-bottom-azul gap05 ">
+                <a href="#" class="center font-weight-bold font-size08 Text-Color-Preto order-link">Políticas de
+                    privacidade</a>
+                <span class="material-icons order-span">security</span>
+
+            </li class=" width70 center">
+            <li class="width70 cursor center border-bottom-azul gap05 ">
+                <a href="{{url('admin/sair')}}" id="sair"
+                    class="center font-weight-bold font-size08 order-link Text-Color-Preto">Sair</a>
+                <span class="material-icons order-span">exit_to_app</span>
+
+            </li>
+        </div>
+    </aside>
+
+    <!--TELA DE CARREGAMENTO-->
+
+    <div class="ContainerSpinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!--TELA PARA OFUSCAR-->
+
+    <div class="OfuscarTela"></div>
+
+
+    <!--SCRIPTS PARA OS JS-->
+
+    <!--ESTILOS BOOTSTRAP-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!--ESTILOS JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!--SCRIPTS DO MAPA-->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="{{url('templates/biblioteca_jquery/jquery-3.7.2.min.js')}}"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,313 +1,368 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços - Help</title>
-    <!--LINKS CRIADOS POR MIM-->
-    <link rel="stylesheet" href="links.css">
-    <link rel="stylesheet" href="../assets/css/stylesglobais.css">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="../assets/css/query/styles.css">
-    <link rel="stylesheet" href="../assets/css/stylesglobais.css">
-    <!--TERMINAM AQUI-->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
-     <!--LINK DO BOOTSTRAP-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-     crossorigin="anonymous"></script>
-
-     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-
-   
-   
-    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
-
+    <link rel="shortcut icon" href="{{url('templates
+    /site/assets/favicon_io/favicon.ico')}}" type="image/x-icon">
+    <title>Help</title>
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/index.css')}}">
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/query/index.css')}}">
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/stylesglobais.css')}}">
+    <link rel="shortcut icon" href="{{url('templates/site/')}}" type="image/x-icon">
 </head>
+<body id="body">
+    {% include 'links.html'%}
 
-<body class="body" id="body">
+    {% for p in pedidos_solicitados %}
+    {% if p.user_aceitou == usuario().id and p.view == 2 %}
+        <p style = "display: none" class="NotificationReject" id="alerta">{{flash()}}</p>
+    {%endif%}
+    {%endfor%}
 
+    <!--Notificação dos vários cancelamentos-->
+
+    {% if notification_pedido_cancel.contador == 3 and notification_pedido_cancel.user_cancelou == usuario().id and notification_pedido_cancel.vista == 0 %}
+    <div class="container-info">
+        <div class="div-info">
+            <div class="display-flex width100 cont-help">
+                <h3><strong class="Text-Color-Azul font-size14">Help</strong></h3>
+                <p class="font-size07 Text-Color-Azul">prestaçãodeserviços</p>
+            </div>
+            
+            <div class="container-info-notification">
+                <span class="material-icons">info</span>
+                <p id="info-notification"></p>
+            </div>
+
+            <div class="width100 Lightgrey"><button class="btn-info" url-btn = "{{url('admin/entendi/'~usuario().id)}}">Entendi</button></div>
+        </div>
+    </div>
+    {%endif%}
+    <!--termina aqui-->
     <header class="header">
-        <a href="#" class="Logo">
-            <h2 class="Text-Color-Azul"><strong>Help</strong></h2>
-        </a>
-        <div class="ContainerLoginMenu gap05 center">
-            <!--
-            {% if usuario().id %}
-            <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido"
-                url-busca="{{url('redirecionar')}}">
-                <p class="display-block">Ver pedido</p>
-                <i class="fas fa-exclamation-triangle alert-icon"></i>
-            </div>
-            {%endif%}
-            {% if usuario().id %}
-            <div class=" Verde-Login padding03 font-size08 border-radius05 center">
-                <a href="{{url('perfil/?'~ToLower(usuario().nome))}}"
-                    class="Text-Color-Branco font-weight-bold ">{{TextoResumido(usuario().nome, 10) }}</a>
-            </div>
-            -->
-            <div class="Login Azul-Login center">
-                <a href="#">Login</a>
-            </div>
-
-            <div class="Menu center" id="Menu">
-                <a class="LinkMenu margin-rigth10 center cursor"><span class="material-icons" id="LinkMenu">menu</span></a>
-            </div>
+       <a href="{{url('')}}" class="Logo" id="logo">
+        <h2 class="Text-Color-Azul"><strong>Help</strong></h2>
+       </a>
+       <div class="ContainerLoginMenu gap05 center">
+       
+        {% if (usuario().id != null) and (pedido_aceite.user_pediu == usuario().id and pedido_aceite.existe == 0) %}
+        <div class="HeaderVerPedido Azul-Marinho center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
+            <p>Pedido aceite!</p>
+            <i class="fas fa-exclamation-triangle alert-icon"></i>
         </div>
+        {% elseif pedido.user_pediu == usuario().id and pedido.existe == 1 %}
+        <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
+            <p>Ver pedido</p>
+            <i class="fas fa-exclamation-triangle alert-icon"></i>
+        </div>
+        {% elseif get_pedido.existe == 1 and usuario().level_admin == 3 %}
+        <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
+            <p>Ver pedido</p>
+            <i class="fas fa-exclamation-triangle alert-icon"></i>
+        </div>
+        {% elseif get_pedido.existe == 0 and usuario().level_admin == 3 %}
+        <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
+            <p>Ver pedido</p>
+            <i class="fas fa-exclamation-triangle alert-icon"></i>
+        </div>
+        {%endif%}
+
+        {% if usuario().id %}
+        {% if usuario().especialidade %}
+        <div class=" Verde-Login padding03 font-size08 border-radius05 center">
+            <a href-busca="{{url('redirecionar')}}" href="{{url('perfil/'~ToLower(usuario().nome))}}" class="Text-Color-Branco cursor font-weight-bold " id="link_perfil">{{TextoResumido(usuario().nome, 10) }}</a>
+        </div>
+        {% elseif usuario().especialidade == null %}
+        <div class=" Verde-Login padding03 font-size08 border-radius05 center">
+            <a busca-user="#" class="Text-Color-Branco font-weight-bold " >{{TextoResumido(usuario().nome, 10) }}</a>
+        </div>
+        {%endif%}
+        {%else%}
+        <div class="Login Azul-Login center">
+            <a href-busca="{{url('redirecionar')}}" class="cursor" id="link_login">Login</a>
+        </div>
+        {%endif%}
+        <div class="Menu center">
+            <a class="LinkMenu margin-rigth10 center cursor"><span class="material-icons">menu</span></a>
+        </div>
+       </div>
     </header>
-
+    
     <main>
-        <!-- Banner Principal -->
-        <section id="home" class="banner">
-            <div class="banner-overlay">
-                <div class="banner-content">
-                    <h1 class="center width100">Serviços de Qualidade no Conforto da Sua Casa</h1>
-                    <a href="#contact" class="cta-button">Fale connosco</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Serviços -->
-        <section id="services" class="services">
-            <div class="container">
-                <h2>Nossos Serviços</h2>
-                <div class="services-grid">
-                    <a href="#" class="service">
-                        <img src="../assets/img/trancas_servicos01.jpeg" alt="Cabeleireiro">
-                        <div class="service-info">
-                            <h3>Cabeleireiro</h3>
-                            <p>Corte, coloração e tratamento de cabelos no seu endereço.</p>
+        <article class="center-coluna article01">
+            <section class="ContainerImgBackground">
+                {% if usuario().level_admin != 2 %}
+                <div class="ContainerForm center-coluna-align">
+                    <form action="{{url('buscar')}}" id="form" role="search" method="post">
+                        <h1 class="Text-Color-Branco">Busque por um serviço na Help</h1>
+                        <div>
+                            <input type="search" name="busca" id="servico" placeholder="Insira o seu serviço" autocomplete="off" maxlength="17" required>
+                            <div id="ResPesquisa" class="box-shadow"></div>
                         </div>
-                    </a>
-                    <a href="#" class="service">
-                        <img src="../assets/img/cabelo.jpg" alt="Barbearia">
-                        <div class="service-info">
-                            <h3>Barbearia</h3>
-                            <p>Corte de cabelo e barba com técnicas modernas e tradicionais.</p>
+                        <div>
+                            <input type="search" name="local" id="local" placeholder="Insira a sua localização"  autocomplete="off" maxlength="17" required>
+                            <div id="ResPesquisaLocal" class="box-shadow"></div>
                         </div>
-                    </a>
-                    <a href="#" class="service">
-                        <img src="../assets/img/pexel.webp" alt="Manicure/Pedicure">
-                        <div class="service-info">
-                            <h3>Manicure/Pedicure</h3>
-                            <p>Cuidados completos para mãos e pés com conforto e higiene.</p>
+                        <button class="SendPedido center Preto Text-Color-Branco" type="submit">Enviar pedido</button>
+                    </form>
+                </div>
+                {% endif %}
+            </section>
+    
+    
+            <!--PROFISSIONAIS DE LIMPEZA-->
+            <section class="SectionServicos hidden">
+                <div class="ConatinerH1CadastroLimpeza center-coluna">
+                    <div class="ContainerH1P">
+                        <h1>Revitalize seu Espaço: Descubra a Magia da Limpeza Profissional!</h1>
+                        <p>Descubra a facilidade e o conforto de um espaço impecavelmente limpo com nosso serviço de limpeza profissional. Na Help, estamos comprometidos em transformar sua casa ou escritório em um ambiente onde o brilho e a organização reinam supremos.Deixe-nos cuidar dos detalhes para que você possa aproveitar mais tempo para o que realmente importa.</p>
+                    </div>
+                    {% if usuario().id == null %}
+                    <div class="CadastroLimpeza center-align">
+                        <p>Ainda não possuis uma conta? Faça o seu cadastro na Help e ganhe muito dinheiro.</p>
+                        <div class="BtnCadastrar Azul-Marinho">
+                            <a href="{{url('cadastro')}}">Cadastrar</a>
                         </div>
-                    </a>
-                    <a href="#" class="service">
-                        <img src="../assets/img/img(3).jpg" alt="Limpeza">
-                        <div class="service-info">
-                            <h3>Limpeza</h3>
-                            <p>Serviços de limpeza profunda para sua casa.</p>
+                    </div>
+                    {%endif%}
+                </div>
+                <div class="DivContainerImgLimpeza center">
+                    <img src="{{url('templates/site/assets/img/img(1).jpg')}}" alt="">
+                </div>
+            </section>
+    
+    
+            <!--PROFISSIONAIS DE CORTES DE CABELOS-->
+            <section class="SectionServicos hidden">
+                <div class="ConatinerH1CadastroLimpeza center-coluna">
+                    <div class="ContainerH1P">
+                        <h1>Beleza em Casa: Cortes de Cabelo onde Você Está!</h1>
+                        <p>Descubra o conforto e a conveniência de receber serviços de cortes de cabelo diretamente na sua casa com o nosso time de profissionais especializados. No nosso site, você pode agendar seu próximo corte com facilidade, garantindo um estilo personalizado e adaptado às suas necessidades. Peça agora os nossos serviços para transformar seu visual sem sair de casa!</p>
+                    </div>
+                    {% if usuario().id == null%}
+                    <div class="CadastroLimpeza center-align">
+                        <p>Ainda não possuis uma conta? Faça o seu cadastro na Help e ganhe muito dinheiro.</p>
+                        <div class="BtnCadastrar Azul-Marinho">
+                            <a href="{{url('cadastro')}}">Cadastrar</a>
                         </div>
-                    </a>
+                    </div>
+                    {%endif%}
                 </div>
-            </div>
-        </section>
-
-        <!-- Seção de Localização -->
-        <section id="location" class="location">
-            <div class="container">
-                <h2>Onde Atuamos</h2>
-                <p>Oferecemos nossos serviços em diversas localidades, incluindo Catepa, Cidade (Centro) e outras áreas.
-                </p>
-                <div id="map_service" class="map">
-                    <img src="https://previews.123rf.com/images/schwabenblitz/schwabenblitz1611/schwabenblitz161100322/65424351-mapa-de-angola-como-uma-pe%C3%A7a-cinza-malanje-%C3%A9-destacado-em-vermelho.jpg" alt="">
+                <div class="DivContainerImgLimpeza center">
+                    <img src="{{url('templates/site/assets/img/corte(1).jpg')}}" alt="">
                 </div>
-                <button type="button"  data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop" class="pt-2 pb-2">Verifique se Atendemos na Sua Região</button>
-            </div>
-        </section>
-
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close center" data-bs-dismiss="modal" aria-label="Close">
-                            <span class="material-icons">close</span>
-                        </button>
+            </section>
+          
+            <!--PROFISSIONAIS DE TRANÇAS-->
+            <section class="SectionServicos hidden">
+                <div class="ConatinerH1CadastroLimpeza center-coluna">
+                    <div class="ContainerH1P">
+                        <h1>Tranças Mágicas: Estilo e Elegância em Cada Fio!</h1>
+                        <p>Descubra a arte das tranças perfeitas no conforto da sua casa com nosso serviço exclusivo de trançado de cabelo. Nossos especialistas estão prontos para criar estilos deslumbrantes que combinam com seu estilo único. Cadastre-se agora para agendar sua sessão e transforme seu visual com tranças que impressionam!</p>
                     </div>
-                    <div class="modal-body">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr class="font-size09">
-                                    Locais desponíveis
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="font-size08">Catepa zona 5 e 6</td>
-                                    <td class="font-size08">Maxinde</td>
-                                    <td class="font-size08">Canânbua</td>
-                                    <td class="font-size08">Cidade (centro)</td>
-                                    <td class="font-size08">Encosta</td>
-                                </tr>
-                            </tbody>
-
-                        </table>
+                    {% if usuario().id == null %}
+                    <div class="CadastroLimpeza center-align">
+                        <p>Ainda não possuis uma conta? Faça o seu cadastro na Help e ganhe muito dinheiro.</p>
+                        <div class="BtnCadastrar Azul-Marinho">
+                            <a href="{{url('cadastro')}}">Cadastrar</a>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary pl-3 pr-3 pt-0 pb-0" data-bs-dismiss="modal">Fechar</button>
-                    </div>
+                    {%endif%}
                 </div>
-            </div>
-        </div>
-
-        <!-- Seção de Testemunhos -->
-        <section id="about" class="testimonials">
-            <div class="container">
-                <h2>O que Nossos Clientes Dizem</h2>
-                <div class="testimonial">
-                    <p>"Excelente serviço! Muito prático e profissional." - Ana Silva</p>
+                <div class="DivContainerImgLimpeza center">
+                    <img src="{{url('templates/site/assets/img/trancas.jpg')}}" alt="" id="imgTrancas">
                 </div>
-                <div class="testimonial">
-                    <p>"Adorei o atendimento e a qualidade dos serviços." - João Pereira</p>
+            </section>
+           
+            <!--PROFISSIONAIS DE MANICURE E PEDICURE-->
+            <section class="SectionServicos hidden">
+                <div class="ConatinerH1CadastroLimpeza center-coluna">
+                    <div class="ContainerH1P">
+                        <h1>"Unhas Impecáveis: Arte e Cuidado para suas Mãos e Pés!"</h1>
+                        <p>Experimente o luxo de cuidados especializados para suas mãos e pés com nosso serviço de manicure e pedicure ao domicílio. Nossos profissionais qualificados oferecem tratamentos que combinam estilo e bem-estar, garantindo unhas impecáveis e uma experiência relaxante. Cadastre-se agora e permita-nos trazer o salão de beleza até você, para que você possa desfrutar de uma aparência incrível sem sair de casa!</p>
+                    </div>
+                    {% if usuario().id == null %}
+                    <div class="CadastroLimpeza center-align">
+                        <p>Ainda não possuis uma conta? Faça o seu cadastro na Help.</p>
+                        <div class="BtnCadastrar Azul-Marinho">
+                            <a href="{{url('cadastro')}}">Cadastrar</a>
+                        </div>
+                    </div>
+                    {%endif%}
                 </div>
-            </div>
-        </section>
-
-        <!-- Seção de Contato -->
-        <section id="contact" class="contact">
-            <div class="container center-coluna">
-                <h2>Entre em Contato</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Nome" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="E-mail" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" placeholder="Telefone">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Mensagem" required></textarea>
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
-                <div class="contact-info">
-                    <p>Telefone: (XX) XXXX-XXXX</p>
-                    <p>E-mail: contato@help.com</p>
+                <div class="DivContainerImgLimpeza center">
+                    <img src="{{url('templates/site/assets/img/manicure(1).jpg')}}" alt="">
                 </div>
-            </div>
-        </section>
-
+            </section>
+        </article>
     </main>
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#about">Sobre Nós</a></li>
-                    <li><a href="#location">Localização</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="social-media">
-                <a href="#" class="social-icon">FB</a>
-                <a href="#" class="social-icon">IG</a>
-                <a href="#" class="social-icon">TW</a>
-            </div>
-            <p>&copy; 2024 Help. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    
+    {% for p in setPedidos %}
 
-    <!--URL DO MEU PEDIDO PARA VERSÕES MOBILES-->
+    <!--DADOS DO USUÁRIO QUE TRABALHA NA HELP-->
+    {% if p.user_aceitou == usuario().id and usuario().especialidade != null %}
 
-    <div id="pedidoMobile" url-busca="{{url('redirecionar')}}" class="center">
+    
+    {% if p.existe == 1 %}
+    <!--VERIFICANDO TOTAL DE PEDIDOS ESPERANDO-->
+    {% if total.pedido_espera == 0 %}
+    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center Azul-Marinho">
         <i class="fas fa-exclamation-triangle alert-icon"></i>
     </div>
+    {%else%}
+    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center pedidoMobile Azul-Marinho">
+        <i class="fas fa-exclamation-triangle alert-icon"></i>
+    </div>
+    {%endif%}
 
-    <!--ESTE É O MEU MENU-->
+    {% elseif p.existe == 0 and p.user_aceitou == usuario().id %}
+    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center Verde-Limão">
+        <i class="fas fa-exclamation-triangle alert-icon"></i>
+    </div>
+    {%endif%}
 
+    {%endif%}
+
+
+    <!--ESTES SÃO OS DADOS DO MEU USUÁRIO QUE FEZ O PEDIDO-->
+    {% if  p.user_pediu == usuario().id and usuario().especialidade == null %}
+    <!--VERIFICANDO TOTAL DE PEDIDOS ESPERANDO-->
+    {% if total.pedido_espera == 0 %}
+
+    {% if p.user_pediu == usuario().id and p.existe == 1 %}
+    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center Azul-Marinho ">
+        <i class="fas fa-exclamation-triangle alert-icon"></i>
+    </div>
+    {%endif%}
+
+    {%else%}
+
+    {%if  p.user_pediu == usuario().id and p.existe == 1 %}
+    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center pedidoMobile Verde-Limão">
+        <i class="fas fa-exclamation-triangle alert-icon"></i>
+    </div>
+    {%endif%}
+
+    {%endif%}
+
+
+    <!--VERIFICANDO TOTAL DE PEDIDOS ACEITES-->
+    {% if total.pedido_aceite == 0 %}
+
+    {%if  p.user_pediu == usuario().id and p.existe == 0 %}
+    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center Verde-Limão">
+        <i class="fas fa-exclamation-triangle alert-icon"></i>
+    </div>
+    {%endif%}
+
+    {%else%}
+
+    {%if  p.user_pediu == usuario().id and p.existe == 0 %}
+    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center pedidoMobile Verde-Limão">
+        <i class="fas fa-exclamation-triangle alert-icon"></i>
+    </div>
+    {%endif%}
+    
+    {%endif%}
+    
+    <!--ENDIF DO USUÁRIO QUE FEZ O PEDIDO-->
+    {%endif%}
+
+    {%endfor%}
     <aside class="gap30 " id="aside">
         <div class="OutMenu center-space-between width100">
             <h1 class=" margin-left20 Text-Color-Azul text-aglin-center">Help</h1>
             <span id="span" class="material-icons margin-rigth10 text-aglin-center cursor">close</span>
         </div>
         <div class="ContainerOptionsMenu center-coluna width100 gap20">
-            <li class=" width70 cursorcenter border-bottom-azul center gap05">
-                <a href="{{url('')}}" class="center order-link Text-Color-Preto font-weight-bold">Página inicial</a>
-                <span class="material-icons order-span">home</span>
-            </li>
+            {% if usuario().id %}
 
+            {% if usuario().level_admin == 2 or  usuario().level_admin == 3%}
+            <li class=" width70 cursorcenter border-bottom-azul center gap05 gap05">
+                <a href="{{url('admin/dashboard')}}" class="center Text-Color-Preto font-weight-bold" target="_blank">Dashboard</a>
+                <span class="material-icons">dashboard</span>
+            </li>
+            {%endif%}
+            {% if usuario().especialidade %}
             <li class=" width70 cursor center border-bottom-azul gap05">
-                <a href="{{url('servicos')}}"
-                    class="center order-link font-weight-bold font-size08 Text-Color-Preto">Serviços</a>
-                <span class="material-icons order-span">work</span>
+                <a href-busca = "{{url('redirecionar')}}" href="{{url('perfil/'~ToLower(usuario().nome))}}" class="center font-weight-bold Text-Color-Preto font-size08" id="link_perfil_menu" >Perfil</a>
+                <span class="material-icons">person</span>
+                
+            </li>
+            {%endif%}
+
+            {%endif%}
+            <li class=" width70 cursor center border-bottom-azul gap05">
+                <a href="{{url('servicos')}}" class="center font-weight-bold font-size08 Text-Color-Preto">Serviços</a>
+                <span class="material-icons">work</span>
 
             </li>
             <li class=" width70 cursor center border-bottom-azul gap05">
-                <a href="#" class="center order-link font-weight-bold font-size08 Text-Color-Preto">Sobre</a>
-                <span class="material-icons order-span ">info</span>
+                <a href="#" class="center font-weight-bold font-size08 Text-Color-Preto">Sobre</a>
+                <span class="material-icons">info</span>
 
             </li>
             <li class=" width70 cursor center border-bottom-azul gap05">
-                <a href="#" class="center order-link font-weight-bold font-size08 Text-Color-Preto">Termos</a>
-                <span class="material-icons order-span">description</span>
+                <a href="{{url('termos')}}" class="center font-weight-bold font-size08 Text-Color-Preto">Termos</a>
+                <span class="material-icons">description</span>
 
             </li>
             <li class=" width70 cursor center border-bottom-azul gap05 ">
-                <a href="#" class="center font-weight-bold font-size08 Text-Color-Preto order-link">Políticas de
-                    privacidade</a>
-                <span class="material-icons order-span">security</span>
+                <a href="#" class="center font-weight-bold font-size08 Text-Color-Preto">Políticas de privacidade</a>
+                <span class="material-icons">security</span>
 
             </li class=" width70 center">
+            {% if usuario().id %}
             <li class="width70 cursor center border-bottom-azul gap05 ">
-                <a href="{{url('admin/sair')}}" id="sair"
-                    class="center font-weight-bold font-size08 order-link Text-Color-Preto">Sair</a>
-                <span class="material-icons order-span">exit_to_app</span>
+                <a href="{{url('admin/sair')}}" id="sair" class="center font-weight-bold font-size08 Text-Color-Preto">Sair</a>
+                <span class="material-icons">exit_to_app</span>
 
             </li>
+            {%endif%}
         </div>
     </aside>
 
-    <!--TELA DE CARREGAMENTO-->
-
-    <div class="ContainerSpinner">
-        <div class="spinner"></div>
-    </div>
-
-    <!--TELA PARA OFUSCAR-->
+    <footer class="Preto">
+        <div class="Contactos">
+            <p class="Text-Color-Branco TextAviso Suporte"><strong>Contatos para Suporte</strong></p>
+            <p class="Text-Color-Branco ContentSuporte">Para dúvidas ou suporte, entre em contato conosco em <a
+                    href="mailto:agmalavo@gmail.com">agmalavo@gmail.com </a> ou +244 944 025 160</p>
+        </div>
+        <div class="SocialMidi TextAvisoa">
+            <p class="Text-Color-Branco"><strong>Redes Sociais</strong></p>
+            <div class="ContainerRedes">
+                <a href="#" class="Redes Branco center">
+                    <i class="fab fa-facebook-f Text-Color-Preto center"></i>
+                </a>
+                <a href="#" class="Redes Branco center">
+                    <i class="fab fa-twitter Text-Color-Preto center"></i>
+                </a>
+                <a href="#" class="Redes Branco center">
+                    <i class="fab fa-youtube Text-Color-Preto center"></i>
+                </a>
+                <a href="#" class="Redes Branco center">
+                    <i class="fab fa-instagram Text-Color-Preto center"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ContainerPrivacy">
+            <a href="#">Política de privacidade</a>
+            <a href="#">Termos de uso</a>
+            <a href="#">Sobre</a>
+        </div>
+    </footer>
 
     <div class="OfuscarTela"></div>
 
+    <!--PÁGINA DE CARREGAMENTO-->
 
-    <!--SCRIPTS PARA OS JS-->
+    <div class="ContainerSpinner">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+    </div>
 
-    <!--ESTILOS BOOTSTRAP-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <!--ESTILOS JQUERY-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <p style = "display: none"  id="alerta"></p>
     
-    <!--SCRIPTS DO MAPA-->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
-    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-    <script src="{{url('templates/biblioteca_jquery/jquery-3.7.2.min.js')}}"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="{{url('templates/site/assets/js/index.js')}}"></script>
 </body>
-
 </html>

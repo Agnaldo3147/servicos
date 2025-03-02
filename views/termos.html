@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url('templates
+    /site/assets/favicon_io/favicon.ico')}}" type="image/x-icon">
+    <title>Help - Serviços ao Domicílio em Malanje</title>
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/termos.css')}}">
+    <!--LINK DO BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    {% include 'links.html' %}
+    <header>
+        <div class="navbar box-shadow">
+            <div class="container">
+                <h1 class="Text-Color-Azul"><a href="{{url('')}}">Help</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#termos">Termos de Uso</a></li>
+                        <li><a href="#privacidade">Política de Privacidade</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!--CARROUCEL-->
+        
+        <div class="carousel-container">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="4000">
+                    <img  src="{{url('templates/site/assets/img/img(3).jpg')}}" alt="Manicure e Pedicure" class="d-block height-img-carousel w-100">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{{url('templates/site/assets/img/img(3).jpg')}}" alt="Manicure e Pedicure" class="  height-img-carousel d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{url('templates/site/assets/img/cabelo.jpg')}}" alt="Manicure e Pedicure" class="height-img-carousel
+                    d-block w-100">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!--
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Bem-vindo à Help</h2>
+                    <p>Seu especialista em serviços ao domicílio em Malanje com marcação online fácil e rápida.</p>
+                    <a href="#servicos" class="btn-primary">Descubra Nossos Serviços</a>
+                </div>
+            </div>
+          
+          -->
+    </header>
+
+    <main>
+        <!-- Seção de Serviços -->
+        <section id="servicos" class="section services">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="service-items">
+                    <div class="service-item">
+                        <img src="{{url('templates/site/assets/img/cabelo.jpg')}}" alt="Manicure e Pedicure">
+                        <h3>Manicure e Pedicure</h3>
+                        <p>Nosso serviço de manicure e pedicure é ideal para quem busca cuidados sofisticados para suas unhas. Utilizamos produtos de alta qualidade para garantir a durabilidade e a beleza das suas unhas.</p>
+                        <p>Oferecemos uma ampla gama de serviços, desde o básico até tratamentos avançados, incluindo esmaltação, decoração e cuidados específicos para unhas sensíveis.</p>
+                        <p>Experimente nosso tratamento de spa para mãos e pés, que inclui esfoliação, hidratação profunda e massagem relaxante.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="{{url('templates/site/assets/img/img(3).jpg')}}" alt="Serviço de Limpeza">
+                        <h3>Limpeza</h3>
+                        <p>Nosso serviço de limpeza é completo e detalhado, projetado para atender às suas necessidades específicas. Desde uma limpeza geral até serviços especializados como limpeza pós-obra.</p>
+                        <p>Utilizamos produtos ecológicos e técnicas eficientes para garantir um ambiente limpo e saudável. Nossa equipe é treinada para lidar com diferentes tipos de superfícies e necessidades.</p>
+                        <p>Além da limpeza regular, oferecemos limpeza de carpetes, estofados e vidros, garantindo que sua casa fique impecável.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="{{url('templates/site/assets/img/img(2).jpg')}}" alt="Barbearia">
+                        <h3>Barbearia</h3>
+                        <p>Desfrute de um serviço de barbearia de alta qualidade diretamente no conforto da sua casa. Oferecemos cortes de cabelo e barba com técnicas modernas e produtos premium.</p>
+                        <p>Seja para um corte clássico ou um estilo mais moderno, nossa equipe de barbeiros é experiente e atualizada com as últimas tendências. Agende seu horário e receba um atendimento personalizado.</p>
+                        <p>Incluímos serviços adicionais como tratamento de pele e aromaterapia para uma experiência completa de cuidado masculino.</p>
+                        
+                    </div>
+                    <div class="service-item">
+                        <img src="{{url('templates/site/assets/img/cabelo.jpg')}}" alt="Cabeleireiro">
+                        <h3>Cabeleireiro</h3>
+                        <p>Transforme seu visual com nosso serviço de cabeleireiro ao domicílio. Oferecemos cortes, coloração e tratamentos capilares para atender às suas necessidades de beleza e estilo.</p>
+                        <p>Nossa equipe de cabeleireiros é formada por profissionais qualificados que utilizam técnicas avançadas e produtos de qualidade para garantir resultados impecáveis.</p>
+                        <p>Desde cortes e coloração até tratamentos de reconstrução capilar, garantimos um atendimento de excelência no conforto da sua casa.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <p><strong>A Help é uma empresa inovadora dedicada a proporcionar serviços ao domicílio de alta qualidade na província de Malanje, Angola. Desde a nossa fundação, nossa missão tem sido oferecer soluções práticas e eficientes para atender às necessidades de nossos clientes com um toque de excelência.</strong></p>
+                <p><strong>Nossa Missão:</strong></p>
+                <p>Fornecer serviços de alta qualidade diretamente na casa de nossos clientes, garantindo conveniência e satisfação através de uma plataforma online fácil de usar. Estamos comprometidos em melhorar a experiência do cliente e oferecer um atendimento personalizado e profissional.</p>
+                <p><strong>Nossa Visão:</strong></p>
+                <p>Ser a principal referência em serviços ao domicílio em Malanje, destacando-nos pela inovação, qualidade e dedicação ao cliente. Queremos ser reconhecidos pela nossa capacidade de atender às necessidades dos clientes com eficiência e um alto padrão de serviço.</p>
+                <p><strong>Nossos Valores:</strong></p>
+                <ul>
+                    <li><strong>Excelência:</strong> Buscamos sempre oferecer o melhor em cada serviço que prestamos.</li>
+                    <li><strong>Compromisso:</strong> Estamos dedicados a cumprir nossos compromissos e superar as expectativas dos nossos clientes.</li>
+                    <li><strong>Inovação:</strong> Continuamos a buscar novas soluções e melhorias para oferecer um serviço de vanguarda.</li>
+                    <li><strong>Respeito:</strong> Tratamos nossos clientes e colaboradores com respeito e dignidade.</li>
+                </ul>
+                <img src="{{url('templates/site/assets/img/img(1).jpg')}}" alt="Nossa Equipe" class="about-img">
+            </div>
+        </section>
+
+        <!-- Seção Termos de Uso -->
+        <section id="termos" class="section">
+            <div class="container">
+                <h2>Termos de Uso</h2>
+                <p><strong>1. Aceitação dos Termos</strong></p>
+                <p>Ao acessar e utilizar os serviços da empresa Help, você concorda em cumprir e estar vinculado a estes Termos de Uso. Caso não concorde com qualquer parte destes termos, por favor, não utilize nossos serviços.</p>
+                <p><strong>2. Serviços</strong></p>
+                <p>A Help oferece serviços ao domicílio com marcação online nas seguintes áreas da província de Malanje, Angola: Catepa zona 5 e 6, encosta, Maxinde, Cidade (centro) e Canânbua. A descrição detalhada dos serviços oferecidos está disponível em nosso site.</p>
+                <p><strong>3. Processo de Reserva</strong></p>
+                <p>Para reservar um serviço, o cliente deve utilizar nossa plataforma online. O cliente deverá fornecer informações precisas e completas para garantir a eficácia da reserva. A confirmação da reserva será enviada ao cliente por e-mail ou mensagem.</p>
+                <p><strong>4. Cancelamento e Reembolsos</strong></p>
+                <p>O cliente pode cancelar uma reserva até 24 horas antes da data marcada, sem custos. Cancelamentos realizados após esse prazo poderão incorrer em taxas de cancelamento, conforme especificado no site. Reembolsos serão processados de acordo com a política de reembolso descrita na nossa plataforma.</p>
+                <p><strong>5. Direitos e Responsabilidades</strong></p>
+                <p>Os clientes devem garantir que a área de prestação de serviços esteja acessível e pronta para o atendimento. A Help não se responsabiliza por danos ou perdas decorrentes da falta de acesso adequado ao local de prestação dos serviços.</p>
+                <p><strong>6. Alterações dos Termos</strong></p>
+                <p>A Help reserva-se o direito de modificar estes Termos de Uso a qualquer momento. Mudanças serão notificadas aos clientes através de nossa plataforma online.</p>
+                <p><strong>7. Contato</strong></p>
+                <p>Para dúvidas ou mais informações sobre estes Termos de Uso, entre em contato conosco através do e-mail disponível em nosso site.</p>
+            </div>
+        </section>
+
+        <!-- Seção Política de Privacidade -->
+        <section id="privacidade" class="section">
+            <div class="container">
+                <h2>Política de Privacidade</h2>
+                <p><strong>1. Coleta de Dados</strong></p>
+                <p>A Help coleta dados pessoais, como nome, endereço, número de telefone e e-mail, necessários para a prestação dos serviços e comunicação com o cliente. Informações adicionais podem ser coletadas conforme necessário para processar reservas e melhorar nossos serviços.</p>
+                <p><strong>2. Uso dos Dados</strong></p>
+                <p>Os dados pessoais coletados são utilizados para:</p>
+                <ul>
+                    <li>Processar reservas e fornecer os serviços solicitados.</li>
+                    <li>Enviar confirmações e atualizações sobre a reserva.</li>
+                    <li>Melhorar nossos serviços e oferecer suporte ao cliente.</li>
+                </ul>
+                <p><strong>3. Armazenamento e Proteção</strong></p>
+                <p>A Help adota medidas de segurança para proteger as informações pessoais dos clientes contra acesso não autorizado, alteração, divulgação ou destruição. Os dados são armazenados em servidores seguros e acessíveis somente por pessoal autorizado.</p>
+                <p><strong>4. Compartilhamento de Dados</strong></p>
+                <p>Os dados pessoais dos clientes não são compartilhados com terceiros, exceto quando necessário para cumprir com a prestação dos serviços ou quando exigido por lei. Podemos compartilhar informações com parceiros de confiança que ajudam a operar nosso site e serviços, desde que esses parceiros concordem em manter a confidencialidade das informações.</p>
+                <p><strong>5. Direitos dos Clientes</strong></p>
+                <p>Os clientes têm o direito de acessar, corrigir ou excluir suas informações pessoais. Para exercer esses direitos, entre em contato conosco através das informações fornecidas em nosso site.</p>
+                <p><strong>6. Alterações na Política</strong></p>
+                <p>A Help pode atualizar esta Política de Privacidade ocasionalmente. Mudanças serão publicadas em nosso site e entrarão em vigor imediatamente após a publicação.</p>
+                <p><strong>7. Contato</strong></p>
+                <p>Para dúvidas sobre esta Política de Privacidade, entre em contato conosco pelo e-mail disponível em nosso site.</p>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="section contact">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Se você tiver qualquer dúvida ou precisar de mais informações, não hesite em entrar em contato conosco. Nossa equipe está pronta para ajudar!</p>
+                <div class="contact-form">
+                    <form action="submit-form.php" method="post">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <p><strong>Endereço:</strong> Rua Exemplo, 123, Malanje, Angola</p>
+                    <p><strong>Telefone:</strong> +244 999 999 999</p>
+                    <p><strong>E-mail:</strong> contato@help.malanje.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Help. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="{{url('templates/site/assets/js/termos.js')}}"> 
+    
+    </script>
+</body>
+</html>

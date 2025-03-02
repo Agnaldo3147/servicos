@@ -1,0 +1,277 @@
+    /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fontes */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.carousel-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   width: 100vw;
+   height: 80vh;
+   background-color: lightgrey;
+}
+
+.carousel {
+    height: 100%;
+    width: 80%;
+}
+.carousel-item {
+    width: 100%;
+    height: 100%;
+}
+.height-img-carousel {
+    object-fit: cover !important;
+    object-position: center center !important;
+}
+
+/* Cabeçalho */
+header {
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+.navbar {
+    background: #FFFFFF;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 2.5rem;
+    margin-left: 20px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 30px;
+}
+
+.navbar nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.navbar nav ul li a:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-carousel {
+    max-width: 800px;
+    margin: auto;
+}
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background: #1e90ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #4682b4;
+}
+
+.btn-secondary {
+    background: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #388e3c;
+}
+
+/* Seções */
+.section {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.section:nth-of-type(even) {
+    background: #f9f9f9;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.section p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.section ul {
+    list-style: disc;
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+/* Seção de Serviços */
+.services {
+    background: #e0f7fa;
+    padding: 60px 20px;
+}
+
+.service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service-item {
+    flex: 1 1 45%;
+    margin: 10px 0;
+    text-align: center;
+    max-width: 45%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.service-item img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #00796b;
+}
+
+.service-item p {
+    font-size: 1rem;
+    padding: 0 15px 15px;
+    color: #555;
+}
+
+/* Seção Sobre Nós */
+.about-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Seção Contato */
+.contact {
+    background: #fff;
+    padding: 60px 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Rodapé */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}

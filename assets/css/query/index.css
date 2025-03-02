@@ -1,0 +1,426 @@
+@media screen and (min-width: 500px) {
+
+    .ContainerForm {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .ContainerForm form {
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+        width: 90%;
+    }
+
+    .ContainerForm form h1 {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    .ContainerForm form div {
+        width: 90%;
+        justify-content: flex-start;
+
+    }
+
+    .ContainerForm form div input {
+        width: 350px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .ContainerForm form div #ResPesquisa {
+        width: 350px;
+
+    }
+
+    .ContainerForm form div #ResPesquisaLocal {
+        width: 350px;
+
+    }
+
+    .SendPedido {
+        padding: 10px;
+        border: none;
+        border-radius: 7px;
+        width: 120px;
+    }
+
+    .ContainerForm form div label {
+        position: absolute;
+        top: 25%;
+        right: 0;
+        transform: translate(-25%, -25%);
+    }
+
+    .ContainerH1P p {
+        font-size: .8em;
+    }
+
+    .CadastroLimpeza p {
+        font-size: .9em;
+    }
+
+    .BtnCadastrar a {
+        font-size: .9em;
+    }
+
+    .DivContainerImgLimpeza {
+
+        height: 87vh;
+
+    }
+
+    /*Usuários da limpeza*/
+    .ContainerUser {
+        width: 180px;
+        height: 180px;
+    }
+
+    .ImgUser {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ImgUser img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    /*CONFIGURAÇÕES DO MEU SEGUNDO ARTICLE*/
+    .article02 {
+        background-color: #FFFFFF;
+    }
+
+    .ContainerLocation {
+        position: relative;
+        width: 100%;
+        height: 60%;
+    }
+
+    #close {
+        height: 30px;
+        width: 30px;
+    }
+
+    .containerPrincipalPerson {
+        gap: 10px;
+    }
+
+    .Person {
+        width: 470px;
+    }
+
+    .Person p {
+        font-size: .8em;
+    }
+
+    .Person .ImgPerson {
+        height: 40px;
+        width: 40px;
+    }
+
+    .Person .ImgPerson img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .ContainerUsersDesponiveis {
+        width: 470px;
+        height: 70px;
+    }
+
+    .ContainerUser p {
+        font-size: .8em;
+    }
+
+    .ContainerCancelarPedido {
+        margin-top: 10px;
+        height: 25px;
+        width: 470px;
+    }
+
+    .ContainerCancelarPedido p {
+        font-size: .8em;
+    }
+
+    .ContainerCancelarPedido span {
+        font-size: .8em;
+    }
+
+
+    /*ESTE É O MEU MAP*/
+    #HeaderVerPedido {
+        display: flex !important;
+    }
+
+    #pedidoMobile {
+        display: none;
+    }
+
+    /*ESTE É O MEU FOOTER*/
+    footer {
+        padding-top: 30px;
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Aviso {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-bottom: 10px;
+    }
+
+    .ContentAviso {
+        font-size: .8em;
+    }
+
+    /*REDES SOCIAIS*/
+
+    .SocialMidia {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 2px;
+    }
+
+    .ContainerRedes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Redes {
+        width: 40px;
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    .Contactos {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 2px;
+    }
+
+    .Suporte {
+        margin-bottom: 10px;
+    }
+
+    .ContentSuporte {
+        font-size: .8em;
+    }
+
+    .ContainerPrivacy {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+    aside {
+        top: 0;
+        left: -420px;
+        width: 320px;
+        height: 100vh;
+    }
+
+}
+
+@media screen and (min-width: 750px) {
+    .Login {
+        width: 70px;
+        border-radius: 13px;
+    }
+
+    .Login a {
+        font-size: 1em;
+    }
+
+    .Menu a {
+        color: #FFFFFF;
+        font-size: 1.3em;
+    }
+
+    .Menu a span {
+        color: #FFFFFF;
+        font-size: 1.3em;
+    }
+
+    .Person p {
+        font-size: .9em;
+    }
+
+    .ContainerUser {
+        width: 90%;
+    }
+
+    .ContainerUser p {
+
+        font-size: .9em;
+    }
+
+    .ContainerCancelarPedido p {
+        font-size: .9em;
+    }
+
+    .ContainerCancelarPedido span {
+        font-size: .9em;
+    }
+
+    .DivContainerImgLimpeza {
+        height: 95vh;
+        width: 85vw;
+    }
+
+    #imgTrancas {
+        object-position: top center;
+    }
+
+    /*CLASS DA MINHA NOTIFICAÇÃO*/
+    .div-info {
+        max-width: 360px;
+    }
+
+    #info-notification {
+        font-size: .9em;
+    }
+
+    .div-info button {
+        padding: 4px;
+        width: 90px;
+        border-radius: 7px;
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .article01 {
+        align-items: baseline;
+        justify-content: baseline;
+    }
+
+    .ContainerImgBackground {
+        height: 100vh;
+        background-position: bottom center;
+    }
+
+    .ContainerForm form div input {
+        width: 420px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .ContainerForm form div #ResPesquisa {
+        width: 420px;
+
+    }
+
+    .ContainerForm form div #ResPesquisaLocal {
+        width: 420px;
+
+    }
+
+    .SectionServicos {
+        flex-direction: row;
+        justify-content: normal;
+        align-items: normal;
+        gap: 10px;
+    }
+
+    .DivContainerImgLimpeza {
+
+        height: 95vh;
+
+    }
+
+    .ConatinerH1CadastroLimpeza {
+        width: 65%;
+        justify-content: flex-start !important;
+    }
+
+    .h3Profissionais {
+        width: 100%;
+        text-align: start;
+        text-indent: 20px;
+
+    }
+
+    .divContainerUsers {
+        overflow-x: hidden !important;
+        width: 100vw !important;
+    }
+
+
+    /*CONFIGURAÇÕES DO MEU SEGUNDO ARTICLE*/
+    .article02 {
+        background-color: #FFFFFF;
+    }
+
+    .ContainerLocation {
+        position: relative;
+        width: 100%;
+        height: 60%;
+    }
+
+    #close {
+        height: 40px;
+        width: 40px;
+        right: 20px;
+    }
+
+    .Person {
+        width: 500px;
+    }
+
+    .Person p {
+        font-size: .9em;
+    }
+
+    .Person .ImgPerson {
+        height: 50px;
+        width: 50px;
+    }
+
+    .Person .ImgPerson img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .ContainerUsersDesponiveis {
+        width: 500px;
+        height: 80px;
+    }
+
+    .ContainerUser p {
+        font-size: .9em;
+    }
+
+    .ContainerCancelarPedido {
+        margin-top: 10px;
+        height: 35px;
+        width: 500px;
+    }
+
+    .ContainerCancelarPedido p {
+        font-size: .9em;
+    }
+
+    .ContainerCancelarPedido span {
+        font-size: .9em;
+    }
+
+
+}

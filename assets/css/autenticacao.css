@@ -1,0 +1,150 @@
+body {
+    background-color: rgba(240, 237, 237, 0.626);
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/cabelo.jpg');
+    background-size: cover;
+}
+.backg-opacity {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: lightgrey;
+    opacity: .80;
+    z-index: 2;
+}
+
+.container-autenticate {
+    z-index: 4;
+    position: relative;
+    top: 100px;
+    left: 50%;
+    width: 300px;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.151);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-help{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.prestate {
+    position: absolute;
+    bottom: -3px;
+    left: 43px;
+    font-size: .8em;
+    font-weight: bold;
+    font-family: monospace;
+    color: gray;
+}
+.logo-help h3{
+    color: blue;
+    font-size: 1.5em
+}
+
+
+.info-autenticate {
+    text-indent: 20px;
+    text-align: justify;
+    font-size: .8em;
+    display: block;
+}
+
+.senha {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.btn-wht {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    border: none;
+    background-color: green;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.btn-wht:hover {
+    opacity: .70;
+}
+
+.btn-wht a{
+    font-size: 1em;
+    color: #FFFFFF;
+}
+.alerta {
+    display: none;
+}
+.input-senha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 35px;
+    width: 25px;
+    border-radius: 5px;
+    border: 1.5px solid black;
+}
+
+.btn-whatsapp {
+    z-index: 4;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: green;
+    cursor: pointer;
+    border: none;
+}
+.btn-wha.btn-whatsapp {
+    opacity: .70;
+}
+.btn-whatsapp a{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+@media screen and (min-width: 650px){
+    .container-autenticate {
+        width: 500px;
+        height: 290px;
+        gap: 20px;
+    }
+    .info-autenticate {
+        font-size: .9em;
+    }
+    .btn-wht {
+        display: flex;
+    }
+    .btn-whatsapp {
+        display: none;
+    }
+}

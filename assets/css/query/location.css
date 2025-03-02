@@ -1,0 +1,214 @@
+@media screen and (min-width: 500px) {
+
+    /*CONFIGURAÇÕES DO MEU SEGUNDO ARTICLE*/
+
+    .ContainerLocation {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .UserPediuImg {
+        height: 35px;
+        width: 35px;
+    }
+
+    #close {
+        height: 35px;
+        width: 35px;
+    }
+
+    /*PARTE DO USUÁRIO QUE VAI ACEITAR O PEDIDO*/
+
+    .ContainerForm>p {
+        font-size: .95em;
+    }
+
+}
+
+@media screen and (min-width:560px) {
+    header {
+        box-shadow: 0 0 0 transparent !important;
+    }
+
+    .Menu a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        padding: 2px;
+        border-radius: 20px;
+    }
+
+    .article02_aceitou {
+        display: block;
+    }
+
+    .ContainerForm {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #FFFFFF;
+        width: 500px;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.098);
+    }
+
+    #btn_aceitar {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        width: 50px;
+        height: 50px;
+        border: none;
+        background-color: blue;
+        color: #FFFFFF;
+        border-radius: 50%;
+        display: none;
+    }
+
+    /*CONFIGURANDO OS DADOS DO MEU USUÁRIO QUE PEDIU O SEREVIÇO AO CLICAR NA IMAGEM DELE*/
+    
+    .ContainerFilhoContainer {
+        max-width: 500px;
+    }
+
+    .FilhoImg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .ContainerFilho p {
+        display: block;
+        text-align: center;
+        font-size: .8em;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+    aside {
+        top: 0;
+        left: -420px;
+        width: 320px;
+        height: 100vh;
+    }
+
+}
+
+
+@media screen and (min-width: 750px) {
+    .leaflet-control-zoom {
+        display: block !important;
+    }
+
+    .UserPediuImg {
+        right: 10px;
+        top: 80px;
+        height: 50px;
+        width: 50px;
+    }
+
+    #close {
+        right: 10px;
+        top: 260px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .Person p {
+        font-size: .9em;
+    }
+
+    .ContainerUser {
+        width: 90%;
+    }
+
+    .ContainerUser p {
+
+        font-size: .9em;
+    }
+
+    .ContainerCancelarPedido p {
+        font-size: .9em;
+    }
+
+    .ContainerCancelarPedido span {
+        font-size: .9em;
+    }
+
+    /*CONFIGURANDO OS DADOS DO MEU USUÁRIO QUE PEDIU O SEREVIÇO AO CLICAR NA IMAGEM DELE*/
+
+    .FilhoImg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ContainerFilho p {
+        font-size: .9em;
+    }
+
+}
+
+
+@media screen and (min-width: 992px) {
+
+    /*CONFIGURAÇÕES DO MEU SEGUNDO ARTICLE*/
+
+   
+    .UserPediuImg {
+        height: 55px;
+        width: 55px;
+        right: 20px;
+    }
+
+    #close {
+        height: 55px;
+        width: 55px;
+        right: 20px;
+    }
+
+    .Person {
+        width: 480px;
+    }
+
+    .Person p {
+        font-size: .9em;
+    }
+
+    .Person .ImgPerson {
+        height: 50px;
+        width: 50px;
+    }
+
+    .Person .ImgPerson img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .ContainerUsersDesponiveis {
+        width: 480px;
+        height: 80px;
+    }
+
+    .ContainerUser p {
+        font-size: .9em;
+    }
+
+    .ContainerCancelarPedido {
+        margin-top: 10px;
+        height: 35px;
+        width: 480px;
+    }
+
+    .ContainerCancelarPedido p {
+        font-size: .9em;
+    }
+
+    .ContainerCancelarPedido span {
+        font-size: .9em;
+    }
+
+}

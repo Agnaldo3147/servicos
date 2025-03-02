@@ -1,0 +1,61 @@
+@media screen and (min-width: 500px) {
+    
+    .SectionForm {
+        width: 360px;
+        height: 440px;
+        border-radius: 10px;
+        padding: 3px;
+    }
+    
+    .CriarConta p{
+        font-size: .9em;
+    }
+    .CriarConta a{
+        width: 90px;
+        border-radius: 7px;
+        font-size: .9em;
+    }
+}
+@media screen and (min-width: 1070px) {
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        display: none;
+    }
+    
+    header div {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 20px;
+        margin-top: 10px;
+       
+    }
+    
+    main {
+        background-image: url('../query/img/pexels-ketut-subiyanto-4815339.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+    .SectionForm {
+        position: absolute;
+        right: 60px;
+        bottom: 60px;
+        width: 360px;
+        height: 430px;
+       
+        border-radius: 10px;
+        padding: 3px;
+        background-color: #FFFFFF;
+    }
+    footer {
+        display: none !important;
+    }
+}

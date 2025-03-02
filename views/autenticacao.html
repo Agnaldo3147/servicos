@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url('templates
+    /site/assets/favicon_io/favicon.ico')}}" type="image/x-icon">
+    <title>Autenticação de {{usuario().nome}} </title>
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/autenticacao.css')}}">
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/stylesglobais.css')}}">
+</head>
+<body>
+    {% include 'links.html' %}
+    <div class="backg-opacity"></div>
+    <div class="container-autenticate">
+        <div class="logo-help">
+            <h3 class="font-size19 Text-Color-Azul">Help</h3>
+            <p class="prestate">prestacaodeservicos</p>
+        </div>
+        <p class="info-autenticate">Para poder iniciar sessão e começar a trabalhar na Help, você precisa autenticar sua conta mandando o código de referência gerado abaixo e o comprovativo de pagamento para o nosso WhatsApp. clique no botão abaixo para mandar o código e o comprovativo de pagamento.</p>
+        <div class="senha">
+            {{flash()}}
+        </div>
+        <button class="btn-wht">
+            <a href="https://whatsapp.web/phone?944025160 ">WhatsApp</a>
+        </button>
+    </div>
+    <button class="btn-whatsapp">
+        <a href="https://whatsapp.web/phone?944025160 " target="_blank" class="whatsApp">W</a>
+    </button>
+
+
+    <script src="{{url('templates/site/assets/js/autenticacao.js')}}"></script>
+</body>
+</html>

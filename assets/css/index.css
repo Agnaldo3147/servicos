@@ -1,0 +1,612 @@
+body {
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    margin-bottom: 20px;
+    height: 50px;
+    padding: auto;
+    z-index: 8;
+}
+
+.Logo {
+    margin-left: 8px;
+}
+
+.ContainerLoginMenu {
+    margin-right: 8px;
+    gap: 8px;
+}
+
+.HeaderVerPedido {
+    width: auto;
+    border-radius: 10px;
+    padding: 3px;
+    cursor: pointer;
+    display: none !important;
+}
+.HeaderVerPedido p{
+    margin-left: 5px;
+    font-size: .8em;
+    color: #FFFFFF;
+}
+
+.Login {
+    width: 60px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.Login a {
+    color: #FFFFFF;
+    font-size: .9em;
+}
+
+.Menu a {
+    color: #FFFFFF;
+    font-size: .9em;
+}
+
+
+main .article01 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.ContainerImgBackground {
+    padding-top: 180px;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background-image: url('../img/img\(2\).jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.ContainerImgBackground h1 {
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.ContainerForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContainerForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 90%;
+}
+
+.ContainerForm form div {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1.5px;
+}
+
+.ContainerForm form div input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.ContainerForm form div #ResPesquisa {
+    position: absolute;
+    top: 102%;
+    width: calc(100% - 16px);
+    height: auto;
+    background-color: #FFFFFF;
+    z-index: 24;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.ContainerForm form div #ResPesquisa p {
+    width: 100%;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.ContainerForm form div #ResPesquisa p:hover {
+    background-color: rgba(211, 211, 211, 0.279);
+}
+
+.ContainerForm form div #ResPesquisaLocal {
+    position: absolute;
+    top: 102%;
+    width: calc(100% - 16px);
+    height: auto;
+    background-color: #FFFFFF;
+    z-index: 24;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.ContainerForm form div #ResPesquisaLocal p {
+    width: 100%;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.ContainerForm form div #ResPesquisaLocal p:hover {
+    background-color: rgba(211, 211, 211, 0.279);
+}
+
+.ContainerForm form div label {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    transform: translate(-25%, -25%);
+}
+
+.SendPedido {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+.SectionServicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ConatinerH1CadastroLimpeza {
+    gap: 20px;
+}
+
+.ContainerH1P {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ContainerH1P h1 {}
+
+.ContainerH1P p {
+    font-size: .8em;
+}
+
+.CadastroLimpeza {
+    width: 90%;
+    gap: 10px;
+}
+
+.CadastroLimpeza p {
+    font-size: .8em;
+}
+
+.BtnCadastrar {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.BtnCadastrar a {
+    font-size: .8em;
+    color: #FFFFFF;
+}
+
+.BtnCadastrar p {
+    font-size: .8em;
+}
+
+.DivContainerImgLimpeza {
+    width: 90%;
+    height: 65vh;
+
+}
+
+.DivContainerImgLimpeza img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.h3Profissionais {
+    text-align: center !important;
+}
+
+
+/*CONFIGURAÇÕES DO MEU SEGUNDO ARTICLE*/
+
+.article02 {
+    position: absolute;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 12;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+}
+
+.ContainerLocation {
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+#close {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.432);
+    z-index: 13;
+}
+.containerPrincipalPerson {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    gap: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.Person {
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #FFFFFF;
+}
+
+.Person p {
+    font-size: .7em;
+}
+
+.Person .ImgPerson {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.Person .ImgPerson img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+.ContainerUsersDesponiveis {
+    width: 90vw;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+   
+}
+#MeusOutrosPedidos {
+    margin-bottom: 10px;
+}
+.ContainerIconUser {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+    width: 85%;
+}
+
+.Icon {
+    border-radius: 5px;
+}
+.ContainerUser {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+}
+.ContainerUser p{
+    font-size: .7em;
+}
+
+.ContainerUsersDesponiveis span {
+    display: block;
+}
+
+.ContainerCancelarPedido {
+    margin-top: 10px;
+    height: 20px;
+    width: 90vw;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.ContainerCancelarPedido p{
+    margin-left: 10px;
+    font-size: .7em;
+}
+.ContainerCancelarPedido span{
+    margin-left: 10px;
+    font-size: .7em;
+    cursor: pointer;
+}
+
+#pedidoMobile {
+    position: absolute;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.274);
+    z-index: 12;
+}
+
+/*ESTE AQUI É O MEU FOOTER*/
+
+footer {
+    padding-top: 30px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Aviso {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 10px;
+}
+
+.ContentAviso {
+    font-size: .8em;
+}
+
+/*REDES SOCIAIS*/
+
+.SocialMidia {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 2px;
+}
+
+.ContainerRedes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.Redes {
+    width: 40px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.Contactos {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 2px;
+}
+
+.Suporte {
+    margin-bottom: 10px;
+}
+
+.ContentSuporte {
+    font-size: .8em;
+}
+
+.ContainerPrivacy {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -110vh;
+    right: -110vw;
+    position: fixed;
+    background-color: #f0f2f5;
+    /*
+    background-color: rgb(135, 206, 235);
+    */
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+.ContainerOptionsMenu li {
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.098);
+}
+
+.ContainerOptionsMenu li:hover {
+    background-color: lightgrey;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1.2s;
+}
+
+/*CLASS DA MINHA NOTIFICAÇÃO*/
+
+.container-info {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 15;
+    background-color: #000000ea;
+}
+
+.div-info {
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3px 10px;
+    max-width: 320px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cont-help {
+    position: relative;
+}
+.cont-help p {
+    position: absolute;
+    left: 54px;
+    bottom: -2px;
+}
+.container-info-notification {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+#info-notification {
+    width: 85%;
+    text-align: justify;
+    display: block;
+    font-size: .85em;
+}
+
+.div-info button {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: blue;
+    color: #FFFFFF;
+    padding: 4px;
+    text-align: center;
+    width: 70px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+/*Classes para actviar por javascript*/
+
+.show {
+    opacity: 1 !important;
+    filter: blur(0) !important;
+    transform: translateX(0) !important;
+    transition: all 1.2s !important;
+}
+
+.EnterMenu700 {
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 10 !important;
+}
+.EnterMenu {
+    top: 0 !important;
+    right: 0 !important;
+
+}
+
+.display-block {
+    display: block !important;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.overflow-y {
+    overflow-y: hidden !important;
+}

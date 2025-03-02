@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url('templates
+    /site/assets/favicon_io/favicon.ico')}}" type="image/x-icon">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/cadastro.css')}}">
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/query/cadastro.css')}}">
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/stylesglobais.css')}}">
+    <link rel="shortcut icon" href="{{url('templates/site/')}}" type="image/x-icon">
+</head>
+<body class="hidden-x">
+    {% include 'links.html'%}
+    <header class="width100">
+        <div class="center DivInfo Branco"><span class="material-icons">Info</span></div>
+    </header>
+    <main class="center-coluna main">      
+        <section class="SectionForm">
+            <form action="{{url('admin/cadastro')}}" method="post" class="center-coluna" id="form">
+                <div class="DivLogo center">
+                    <p class="Text-Color-Azul">Help</p>
+                </div>
+                <div class="center Prom">
+                    <p class="font-size09 opacity75 center" >Faça o seu cadastro aqui e comece a ganhar mais dinheiro</p>
+                </div>
+                <div class="center width100">
+                    <p class="font-size08 Text-Color-Laranja center text-align-center" id="alert_sms"></p>
+                </div>
+                <div class="Campo center">
+                    <input type="text" name="nome_bi" class="input_label" id="nome_ni" required>
+                    <label for="nome_bi" class="label" >Nome completo do BI</label>
+                </div>
+                <div class="Campo center">
+                    <input type="tel" name="telefone" class="input_label" id="telefone" required>
+                    <label for="telefone" class="label" >Número de telefone</label>
+                </div>
+                <div class="Campo center">
+                    <input type="text" name="nome" class="input_label" id="nome" required>
+                    <label for="nome" class="label" >Nome de utilizador</label>
+                </div>
+                <div class="Campo center">
+                    <input type="password" minlength="4" maxlength="12" name="senha" class="input_label" id="senha" required>
+                    <label for="senha" class="label" >Palavra-passe</label>
+                </div>
+                <div class="Campo center">
+                    <input type="password" minlength="4" maxlength="12" name="confirmar_senha" class="input_label" id="confirmar_senha" required>
+                    <label for="senha" class="label" >Confirmar palavra-passe</label>
+                </div>
+                <div class="Campo width100 center">
+                    <p class="width90 text-align-left font-weight-bold ">Especialidade</p>
+                </div>
+                <div class="Campo width100 center">
+                    <select name="especialidade" id="especialidade" class="width90 border-radius05 padding08" >
+                        <option value="limpeza" selected>Limpeza</option>
+                        <option value="barbeiro">Barbearia(a)</option>
+                        <option value="cabelereiro">Cabelereiro(a)</option>
+                        <option value="manicure">Manicure/Pedicure</option>
+                    </select>
+                </div>
+                <div class="DivBtn center Azul">
+                    <button type="submit" class="BtnSend Azul-Marinho Text-Color-Branco cursor">
+                        Cadastar
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="center-coluna footer gap10 width100">
+        <div class="ContainerFooter gap10 center">
+            <a href="#" class="font-size08 linkfooter">Sobre</a>
+            <a href="#" class="font-size08 linkfooter">Termos de uso</a>
+            <a href="#" class="font-size08 linkfooter">Políticas de privacidade</a>
+            <a href="#" class="font-size08 linkfooter">Ajuda/Suporte</a>
+        </div>
+        <div class="FromHelp center">
+            <p class="font-size08 opacity75 FromHelp" >@2024 from Help</p>
+        </div>
+    </footer>
+    <script src="{{url('templates/site/assets/js/cadastro.js')}}"></script>
+</body>
+</html>

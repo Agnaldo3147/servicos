@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url('templates
+    /site/assets/favicon_io/favicon.ico')}}" type="image/x-icon">
+    <title>{{TextoResumido(ToLower(usuario().nome), 18)}}</title>
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/perfil.css')}}">
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/query/perfil.css')}}">
+    <link rel="stylesheet" href="{{url('templates/site/assets/css/stylesglobais.css')}}">
+
+    <!--LINK DO BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    {% include 'links.html' %}
+    <header class="width100vw center-space-between padding10 box-shadow">
+        <a href="{{url('')}}">
+            <h3 class="Text-Color-Azul margin-left10">Help</h3>
+        </a>
+        <div class="center">
+            <p class="text-align-center margin-rigth10">Perfil</p>
+        </div>
+    </header>
+    <main>
+        <article id="article01" class="width100vw center-coluna">
+            <div class="DivImg">
+                {% if usuario().imagem %}
+                <img src="{{url('upload/imagens/perfil/'~usuario().imagem)}}" alt="">
+                {%else%}
+                <img src="{{url('templates/site/assets/img/perfil.png')}}" alt="">
+                {%endif%}
+            </div>
+            <div class="ContainerInfoUser width100vw">
+                <div class=" padding05 center-space-between gap10 width100">
+                    <p class="margin-left10 font-size08">
+                        Nome: <strong class="opacity90 font-size08">{{usuario().nome}}</strong>
+                    </p>
+                </div>
+                <div class="padding05 center-align gap10 width100">
+                    <p class="margin-left10 font-size08">Especialidade:</p>
+                    <p class="material-icons opacity90 margin-rigth10 font-size08"><strong>{{usuario().especialidade}}</strong></p>
+                </div>
+                <!--
+                <div class="padding05 center-coluna-justify gap10 width100">
+                    <p class="margin-left10 font-size08">Sobre você</p>
+                    <p class="margin-left10 opacity90 font-size08"><strong>Eu sou {{usuario().nome}} especialidade em {{usuario().especialidade}}</strong></p>
+                </div>
+                -->
+                <div class="padding05 center-space-between width300px">
+                    <p class="margin-left10 font-size08">Editar perfil</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="margin-rigth10 btn_edite cursor center font-size08">
+                        <i class="material-icons center">edite</i>
+                    </button>
+                </div>
+            </div>
+        </article>
+        <article id="article02" class="width100vw center-coluna gap20">
+           
+            <div class="ContainerWorkUser">
+                <div>
+                    <img src="{{url('templates/site/assets/img/corte(1).jpg')}}" alt="">
+                </div>
+                <div>
+                    <img src="{{url('templates/site/assets/img/corte(1).jpg')}}" alt="">
+                </div>
+                <div>
+                    <img src="{{url('templates/site/assets/img/corte(1).jpg')}}" alt="">
+                </div>
+                <div>
+                    <img src="{{url('templates/site/assets/img/corte(1).jpg')}}" alt="">
+                </div>
+            </div>
+        </article>
+    </main>
+
+
+    
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Pedidos</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <aside id="aside">
+                <form action="{{url('admin/actualizar/'~usuario().id)}}" method="post" enctype="multipart/form-data" id="form02">
+                    <div class="DivActualização">
+                        <input type="text" name="nome" id="nome" class="input_label" minlength="3" maxlength="20">
+                        <label for="nome">Actualizar nome</label>
+                    </div>
+                    <div class="DivActualização">
+                        <input type="password" name="senha_antiga" minlength="4" maxlength="12" id="senha_antiga" class="input_label">
+                        <label for="senha">Actualizar senha (Senha antiga)</label>
+                    </div>
+                    <div class="DivActualização">
+                        <input type="password" name="senha_nova" minlength="4" maxlength="12" id="senha_nova" class="input_label">
+                        <label for="senha">Actualizar senha (Senha nova)</label>
+                    </div>
+                    <div class="FotoPerfil">
+                        <label for="imagem">Mudar foto de perfil</label>
+                        <input type="file" class="form-control" name="imagem" id="imagem">
+                    </div>
+                    <div id="PreviewFoto" class="center">
+                        <img src="{{url('templates/site/assets/img/perfil.png')}}" alt="">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn_edite">Actualizar</button>
+                    </div>
+                </form>
+            </aside>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+    
+   {% include 'links.html'%}
+    <script src="{{url('templates/site/assets/js/perfil.js')}}"></script>
+</body>
+</html>
