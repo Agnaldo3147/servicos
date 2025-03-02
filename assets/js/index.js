@@ -470,7 +470,8 @@ $(document).ready(function () {
             })
         }
     }
-    
+    //ESTES SÃO OS LINKS DE REDIRECIONAMENTO COM EFEITOS
+    /*
     $('#HeaderVerPedido').on('click', function () {
     
         $.ajax({
@@ -542,15 +543,16 @@ $(document).ready(function () {
     
     $('#link_login').on('click', function (e) {
         e.preventDefault()
+       
         $.ajax({
             type: "get",
-            url: $(this).attr('href-busca'),
+            url: $(this).attr('href'),
             beforeSend: function () {
                 ContainerSpinner.style = 'display: flex'
             },
             success: function (response) {
-                result = JSON.parse(response)
-                window.location.href = result.login
+                result = $(this).attr('href')
+                window.location.href = result
             },
             complete: function () {
                 ContainerSpinner.style = 'display: none'
@@ -563,7 +565,7 @@ $(document).ready(function () {
         });
     })
 
-   
+   */
     //MOSTRANO AS OTIFICÕES
     
     if(document.contains(document.querySelector('#info-notification'))) {
@@ -654,5 +656,4 @@ elements.forEach((e) => {
     myObserver.observe(e)
 })
 
-console.log(elements)
 

@@ -49,8 +49,7 @@
                     </p>
                 </div>
                 <div class="padding05 center-align gap10 width100">
-                    <p class="margin-left10 font-size08">Especialidade:</p>
-                    <p class="material-icons opacity90 margin-rigth10 font-size08"><strong>Carpinteiro</strong></p>
+                    <p class="margin-left10 font-size08">Especialidade: <strong>Cabelereiro</strong></p>
                 </div>
                 <!--
                 <div class="padding05 center-coluna-justify gap10 width100">
@@ -115,7 +114,7 @@
                         <input type="file" class="form-control" name="imagem" id="imagem">
                     </div>
                     <div id="PreviewFoto" class="center">
-                        <img src="{{url('templates/site/assets/img/perfil.png')}}" alt="">
+                        <img src="../assets/img/perfil.png" alt="">
                     </div>
                     <div>
                         <button type="submit" class="btn_edite">Actualizar</button>
@@ -127,7 +126,20 @@
       </div>
     </div>
   </div>
+    <!--SCRIPTS PARA OS JS-->
+
+    <!--ESTILOS BOOTSTRAP-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!--ESTILOS JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
+    <!--SCRIPTS DO MAPA-->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="{{url('templates/biblioteca_jquery/jquery-3.7.2.min.js')}}"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
  
     <script src="../assets/js/perfil.js"></script>
 </body>

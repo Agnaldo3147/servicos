@@ -2,7 +2,9 @@
 body {
     overflow-x: hidden;
 }
-
+a{
+    text-decoration: none !important;
+}
 header {
     position: absolute;
     top: 0;
