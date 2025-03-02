@@ -6,22 +6,52 @@
     <link rel="shortcut icon" href="{{url('templates
     /site/assets/favicon_io/favicon.ico')}}" type="image/x-icon">
     <title>Help</title>
-    <link rel="stylesheet" href="{{url('templates/site/assets/css/index.css')}}">
-    <link rel="stylesheet" href="{{url('templates/site/assets/css/query/index.css')}}">
-    <link rel="stylesheet" href="{{url('templates/site/assets/css/stylesglobais.css')}}">
-    <link rel="shortcut icon" href="{{url('templates/site/')}}" type="image/x-icon">
+    <!--LINKS CRIADOS POR MIM-->
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/query/index.css">
+    <link rel="stylesheet" href="../assets/css/stylesglobais.css">
+    <!--TERMINAM AQUI-->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+     <!--LINK DO BOOTSTRAP-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+     crossorigin="anonymous"></script>
+
+     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+   
+   
+    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
+    
 </head>
 <body id="body">
-    {% include 'links.html'%}
-
-    {% for p in pedidos_solicitados %}
-    {% if p.user_aceitou == usuario().id and p.view == 2 %}
-        <p style = "display: none" class="NotificationReject" id="alerta">{{flash()}}</p>
-    {%endif%}
-    {%endfor%}
+    <!--
+        {% include 'links.html'%}
+    
+        {% for p in pedidos_solicitados %}
+        {% if p.user_aceitou == usuario().id and p.view == 2 %}
+            <p style = "display: none" class="NotificationReject" id="alerta">{{flash()}}</p>
+        {%endif%}
+        {%endfor%}
+    -->
 
     <!--Notificação dos vários cancelamentos-->
-
+    <!--
     {% if notification_pedido_cancel.contador == 3 and notification_pedido_cancel.user_cancelou == usuario().id and notification_pedido_cancel.vista == 0 %}
     <div class="container-info">
         <div class="div-info">
@@ -39,60 +69,66 @@
         </div>
     </div>
     {%endif%}
+    -->
     <!--termina aqui-->
     <header class="header">
-       <a href="{{url('')}}" class="Logo" id="logo">
+       <a href="index.html" class="Logo" id="logo">
         <h2 class="Text-Color-Azul"><strong>Help</strong></h2>
        </a>
        <div class="ContainerLoginMenu gap05 center">
-       
-        {% if (usuario().id != null) and (pedido_aceite.user_pediu == usuario().id and pedido_aceite.existe == 0) %}
-        <div class="HeaderVerPedido Azul-Marinho center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
-            <p>Pedido aceite!</p>
-            <i class="fas fa-exclamation-triangle alert-icon"></i>
-        </div>
-        {% elseif pedido.user_pediu == usuario().id and pedido.existe == 1 %}
-        <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
-            <p>Ver pedido</p>
-            <i class="fas fa-exclamation-triangle alert-icon"></i>
-        </div>
-        {% elseif get_pedido.existe == 1 and usuario().level_admin == 3 %}
-        <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
-            <p>Ver pedido</p>
-            <i class="fas fa-exclamation-triangle alert-icon"></i>
-        </div>
-        {% elseif get_pedido.existe == 0 and usuario().level_admin == 3 %}
-        <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
-            <p>Ver pedido</p>
-            <i class="fas fa-exclamation-triangle alert-icon"></i>
-        </div>
-        {%endif%}
+           <!--
+            <div class="HeaderVerPedido Azul-Marinho center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
+                <p>Pedido aceite!</p>
+                <i class="fas fa-exclamation-triangle alert-icon"></i>
+            </div>
+            {% if (usuario().id != null) and (pedido_aceite.user_pediu == usuario().id and pedido_aceite.existe == 0) %}
+            <div class="HeaderVerPedido Azul-Marinho center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
+                <p>Pedido aceite!</p>
+                <i class="fas fa-exclamation-triangle alert-icon"></i>
+            </div>
+            {% elseif pedido.user_pediu == usuario().id and pedido.existe == 1 %}
+            <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
+                <p>Ver pedido</p>
+                <i class="fas fa-exclamation-triangle alert-icon"></i>
+            </div>
+            {% elseif get_pedido.existe == 1 and usuario().level_admin == 3 %}
+            <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
+                <p>Ver pedido</p>
+                <i class="fas fa-exclamation-triangle alert-icon"></i>
+            </div>
+            {% elseif get_pedido.existe == 0 and usuario().level_admin == 3 %}
+            <div class="HeaderVerPedido Cor-Espera center gap05" id="HeaderVerPedido" url-busca = "{{url('redirecionar')}}" >
+                <p>Ver pedido</p>
+                <i class="fas fa-exclamation-triangle alert-icon"></i>
+            </div>
+            {%endif%}
+            {% if usuario().id %}
+            {% if usuario().especialidade %}
+            <div class=" Verde-Login padding03 font-size08 border-radius05 center">
+                <a href-busca="{{url('redirecionar')}}" href="{{url('perfil/'~ToLower(usuario().nome))}}" class="Text-Color-Branco cursor font-weight-bold " id="link_perfil">{{TextoResumido(usuario().nome, 10) }}</a>
+            </div>
+            {% elseif usuario().especialidade == null %}
+            <div class=" Verde-Login padding03 font-size08 border-radius05 center">
+                <a busca-user="#" class="Text-Color-Branco font-weight-bold " >{{TextoResumido(usuario().nome, 10) }}</a>
+            </div>
+            {%endif%}
+            {%else%}
+            <div class="Login Azul-Login center">
+                <a href-busca="{{url('redirecionar')}}" class="cursor" id="link_login">Login</a>
+            </div>
+            {%endif%}
+            -->
+            <div class="Menu center">
+                <a class="LinkMenu margin-rigth10 center cursor" ><span class="material-icons"id="LinkMenu">menu</span></a>
+            </div>
 
-        {% if usuario().id %}
-        {% if usuario().especialidade %}
-        <div class=" Verde-Login padding03 font-size08 border-radius05 center">
-            <a href-busca="{{url('redirecionar')}}" href="{{url('perfil/'~ToLower(usuario().nome))}}" class="Text-Color-Branco cursor font-weight-bold " id="link_perfil">{{TextoResumido(usuario().nome, 10) }}</a>
-        </div>
-        {% elseif usuario().especialidade == null %}
-        <div class=" Verde-Login padding03 font-size08 border-radius05 center">
-            <a busca-user="#" class="Text-Color-Branco font-weight-bold " >{{TextoResumido(usuario().nome, 10) }}</a>
-        </div>
-        {%endif%}
-        {%else%}
-        <div class="Login Azul-Login center">
-            <a href-busca="{{url('redirecionar')}}" class="cursor" id="link_login">Login</a>
-        </div>
-        {%endif%}
-        <div class="Menu center">
-            <a class="LinkMenu margin-rigth10 center cursor"><span class="material-icons">menu</span></a>
-        </div>
        </div>
+
     </header>
     
     <main>
         <article class="center-coluna article01">
             <section class="ContainerImgBackground">
-                {% if usuario().level_admin != 2 %}
                 <div class="ContainerForm center-coluna-align">
                     <form action="{{url('buscar')}}" id="form" role="search" method="post">
                         <h1 class="Text-Color-Branco">Busque por um serviço na Help</h1>
@@ -107,7 +143,6 @@
                         <button class="SendPedido center Preto Text-Color-Branco" type="submit">Enviar pedido</button>
                     </form>
                 </div>
-                {% endif %}
             </section>
     
     
@@ -118,17 +153,17 @@
                         <h1>Revitalize seu Espaço: Descubra a Magia da Limpeza Profissional!</h1>
                         <p>Descubra a facilidade e o conforto de um espaço impecavelmente limpo com nosso serviço de limpeza profissional. Na Help, estamos comprometidos em transformar sua casa ou escritório em um ambiente onde o brilho e a organização reinam supremos.Deixe-nos cuidar dos detalhes para que você possa aproveitar mais tempo para o que realmente importa.</p>
                     </div>
-                    {% if usuario().id == null %}
+              
                     <div class="CadastroLimpeza center-align">
                         <p>Ainda não possuis uma conta? Faça o seu cadastro na Help e ganhe muito dinheiro.</p>
                         <div class="BtnCadastrar Azul-Marinho">
                             <a href="{{url('cadastro')}}">Cadastrar</a>
                         </div>
                     </div>
-                    {%endif%}
+                
                 </div>
                 <div class="DivContainerImgLimpeza center">
-                    <img src="{{url('templates/site/assets/img/img(1).jpg')}}" alt="">
+                    <img src="../assets/img/img(1).jpg" alt="">
                 </div>
             </section>
     
@@ -140,17 +175,17 @@
                         <h1>Beleza em Casa: Cortes de Cabelo onde Você Está!</h1>
                         <p>Descubra o conforto e a conveniência de receber serviços de cortes de cabelo diretamente na sua casa com o nosso time de profissionais especializados. No nosso site, você pode agendar seu próximo corte com facilidade, garantindo um estilo personalizado e adaptado às suas necessidades. Peça agora os nossos serviços para transformar seu visual sem sair de casa!</p>
                     </div>
-                    {% if usuario().id == null%}
+                   
                     <div class="CadastroLimpeza center-align">
                         <p>Ainda não possuis uma conta? Faça o seu cadastro na Help e ganhe muito dinheiro.</p>
                         <div class="BtnCadastrar Azul-Marinho">
                             <a href="{{url('cadastro')}}">Cadastrar</a>
                         </div>
                     </div>
-                    {%endif%}
+                    
                 </div>
                 <div class="DivContainerImgLimpeza center">
-                    <img src="{{url('templates/site/assets/img/corte(1).jpg')}}" alt="">
+                    <img src="../assets/img/corte(1).jpg" alt="">
                 </div>
             </section>
           
@@ -161,17 +196,17 @@
                         <h1>Tranças Mágicas: Estilo e Elegância em Cada Fio!</h1>
                         <p>Descubra a arte das tranças perfeitas no conforto da sua casa com nosso serviço exclusivo de trançado de cabelo. Nossos especialistas estão prontos para criar estilos deslumbrantes que combinam com seu estilo único. Cadastre-se agora para agendar sua sessão e transforme seu visual com tranças que impressionam!</p>
                     </div>
-                    {% if usuario().id == null %}
+                    
                     <div class="CadastroLimpeza center-align">
                         <p>Ainda não possuis uma conta? Faça o seu cadastro na Help e ganhe muito dinheiro.</p>
                         <div class="BtnCadastrar Azul-Marinho">
                             <a href="{{url('cadastro')}}">Cadastrar</a>
                         </div>
                     </div>
-                    {%endif%}
+                 
                 </div>
                 <div class="DivContainerImgLimpeza center">
-                    <img src="{{url('templates/site/assets/img/trancas.jpg')}}" alt="" id="imgTrancas">
+                    <img src="../assets/img/trancas.jpg" alt="" id="imgTrancas">
                 </div>
             </section>
            
@@ -182,119 +217,43 @@
                         <h1>"Unhas Impecáveis: Arte e Cuidado para suas Mãos e Pés!"</h1>
                         <p>Experimente o luxo de cuidados especializados para suas mãos e pés com nosso serviço de manicure e pedicure ao domicílio. Nossos profissionais qualificados oferecem tratamentos que combinam estilo e bem-estar, garantindo unhas impecáveis e uma experiência relaxante. Cadastre-se agora e permita-nos trazer o salão de beleza até você, para que você possa desfrutar de uma aparência incrível sem sair de casa!</p>
                     </div>
-                    {% if usuario().id == null %}
+                    
                     <div class="CadastroLimpeza center-align">
                         <p>Ainda não possuis uma conta? Faça o seu cadastro na Help.</p>
                         <div class="BtnCadastrar Azul-Marinho">
                             <a href="{{url('cadastro')}}">Cadastrar</a>
                         </div>
                     </div>
-                    {%endif%}
+                  
                 </div>
                 <div class="DivContainerImgLimpeza center">
-                    <img src="{{url('templates/site/assets/img/manicure(1).jpg')}}" alt="">
+                    <img src="../assets/img/manicure(1).jpg" alt="">
                 </div>
             </section>
         </article>
     </main>
     
-    {% for p in setPedidos %}
-
-    <!--DADOS DO USUÁRIO QUE TRABALHA NA HELP-->
-    {% if p.user_aceitou == usuario().id and usuario().especialidade != null %}
-
     
-    {% if p.existe == 1 %}
-    <!--VERIFICANDO TOTAL DE PEDIDOS ESPERANDO-->
-    {% if total.pedido_espera == 0 %}
-    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center Azul-Marinho">
-        <i class="fas fa-exclamation-triangle alert-icon"></i>
-    </div>
-    {%else%}
-    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center pedidoMobile Azul-Marinho">
-        <i class="fas fa-exclamation-triangle alert-icon"></i>
-    </div>
-    {%endif%}
-
-    {% elseif p.existe == 0 and p.user_aceitou == usuario().id %}
-    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center Verde-Limão">
-        <i class="fas fa-exclamation-triangle alert-icon"></i>
-    </div>
-    {%endif%}
-
-    {%endif%}
-
-
-    <!--ESTES SÃO OS DADOS DO MEU USUÁRIO QUE FEZ O PEDIDO-->
-    {% if  p.user_pediu == usuario().id and usuario().especialidade == null %}
-    <!--VERIFICANDO TOTAL DE PEDIDOS ESPERANDO-->
-    {% if total.pedido_espera == 0 %}
-
-    {% if p.user_pediu == usuario().id and p.existe == 1 %}
-    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center Azul-Marinho ">
-        <i class="fas fa-exclamation-triangle alert-icon"></i>
-    </div>
-    {%endif%}
-
-    {%else%}
-
-    {%if  p.user_pediu == usuario().id and p.existe == 1 %}
-    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center pedidoMobile Verde-Limão">
-        <i class="fas fa-exclamation-triangle alert-icon"></i>
-    </div>
-    {%endif%}
-
-    {%endif%}
-
-
-    <!--VERIFICANDO TOTAL DE PEDIDOS ACEITES-->
-    {% if total.pedido_aceite == 0 %}
-
-    {%if  p.user_pediu == usuario().id and p.existe == 0 %}
-    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center Verde-Limão">
-        <i class="fas fa-exclamation-triangle alert-icon"></i>
-    </div>
-    {%endif%}
-
-    {%else%}
-
-    {%if  p.user_pediu == usuario().id and p.existe == 0 %}
-    <div id="pedidoMobile" url-busca = "{{url('redirecionar')}}" class="center pedidoMobile Verde-Limão">
-        <i class="fas fa-exclamation-triangle alert-icon"></i>
-    </div>
-    {%endif%}
-    
-    {%endif%}
-    
-    <!--ENDIF DO USUÁRIO QUE FEZ O PEDIDO-->
-    {%endif%}
-
-    {%endfor%}
     <aside class="gap30 " id="aside">
         <div class="OutMenu center-space-between width100">
             <h1 class=" margin-left20 Text-Color-Azul text-aglin-center">Help</h1>
             <span id="span" class="material-icons margin-rigth10 text-aglin-center cursor">close</span>
         </div>
         <div class="ContainerOptionsMenu center-coluna width100 gap20">
-            {% if usuario().id %}
-
-            {% if usuario().level_admin == 2 or  usuario().level_admin == 3%}
+           
             <li class=" width70 cursorcenter border-bottom-azul center gap05 gap05">
                 <a href="{{url('admin/dashboard')}}" class="center Text-Color-Preto font-weight-bold" target="_blank">Dashboard</a>
                 <span class="material-icons">dashboard</span>
             </li>
-            {%endif%}
-            {% if usuario().especialidade %}
+           
             <li class=" width70 cursor center border-bottom-azul gap05">
-                <a href-busca = "{{url('redirecionar')}}" href="{{url('perfil/'~ToLower(usuario().nome))}}" class="center font-weight-bold Text-Color-Preto font-size08" id="link_perfil_menu" >Perfil</a>
+                <a href-busca = "{{url('redirecionar')}}" href="perfil.html" class="center font-weight-bold Text-Color-Preto font-size08" id="link_perfil_menu" >Página inicial</a>
                 <span class="material-icons">person</span>
                 
             </li>
-            {%endif%}
-
-            {%endif%}
+            
             <li class=" width70 cursor center border-bottom-azul gap05">
-                <a href="{{url('servicos')}}" class="center font-weight-bold font-size08 Text-Color-Preto">Serviços</a>
+                <a href="servicos.html" class="center font-weight-bold font-size08 Text-Color-Preto">Serviços</a>
                 <span class="material-icons">work</span>
 
             </li>
@@ -313,13 +272,13 @@
                 <span class="material-icons">security</span>
 
             </li class=" width70 center">
-            {% if usuario().id %}
+           
             <li class="width70 cursor center border-bottom-azul gap05 ">
                 <a href="{{url('admin/sair')}}" id="sair" class="center font-weight-bold font-size08 Text-Color-Preto">Sair</a>
                 <span class="material-icons">exit_to_app</span>
 
             </li>
-            {%endif%}
+      
         </div>
     </aside>
 
@@ -362,7 +321,15 @@
     </div>
 
     <p style = "display: none"  id="alerta"></p>
+
+    <!--SCRIPTS PARA OS JS-->
+
+    <!--ESTILOS BOOTSTRAP-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!--ESTILOS JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
-    <script src="{{url('templates/site/assets/js/index.js')}}"></script>
+    
+    <script src="../assets/js/index.js"></script>
 </body>
 </html>

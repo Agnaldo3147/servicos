@@ -6,13 +6,13 @@
     <link rel="shortcut icon" href="{{url('templates
     /site/assets/favicon_io/favicon.ico')}}" type="image/x-icon">
     <title>Login</title>
-    <link rel="stylesheet" href="{{url('templates/site/assets/css/login.css')}}">
-    <link rel="stylesheet" href="{{url('templates/site/assets/css/query/login.css')}}">
-    <link rel="stylesheet" href="{{url('templates/site/assets/css/stylesglobais.css')}}">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/query/login.css">
+    <link rel="stylesheet" href="../assets/css/stylesglobais.css">
     <link rel="shortcut icon" href="{{url('templates/site/')}}" type="image/x-icon">
 </head>
 <body class="hidden-x">
-    {% include 'links.html' %}
+
     <header class="width100">
         <div class="center DivInfo Branco"><span class="material-icons">Info</span></div>
     </header>
@@ -22,11 +22,13 @@
                 <div class="DivLogo center">
                     <p class="Text-Color-Azul">Help</p>
                 </div>
-                <div class=" width100 center">
-                    <p class=" center Text-Color-Vermelho text-align-center alert_senha">{{flash()}}</p>
-
-                    <p class=" center Text-Color-Laranja text-align-center alert_sms"></p>
-                </div>
+                <!--
+                    <div class=" width100 center">
+                        <p class=" center Text-Color-Vermelho text-align-center alert_senha">{{flash()}}</p>
+    
+                        <p class=" center Text-Color-Laranja text-align-center alert_sms"></p>
+                    </div>
+                -->
                 <div class="Campo center">
                     <input type="tel" name="telefone" class="sms_input input_label" id="nome">
                     <label for="nome" class="label" >Número de telefone</label>
@@ -45,7 +47,7 @@
                 </div>
                 <div class="CriarConta">
                     <p class="opacity75">Já possuis uma conta?</p>
-                    <a href="{{url('criar_conta')}}" class="Text-Color-Branco Verde-Escuro">Criar conta</a>
+                    <a href="../views/cadastro_user_pedinte.html" class="Text-Color-Branco Verde-Escuro">Criar conta</a>
                 </div>
             </form>
         </section>
@@ -66,6 +68,6 @@
         <div class="spinner"></div>
     </div>
 
-    <script src="{{url('templates/site/assets/js/login.js')}}"></script>
+    <script src="../assets/js/login.js"></script>
 </body>
 </html>
