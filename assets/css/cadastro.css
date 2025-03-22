@@ -169,7 +169,7 @@ footer {
 /*CLASSE PARA BAIXAR A INFORMAÇÃO EXPOSTA*/
 
 .download-information {
-    bottom: calc( 40px - 400px ) !important;
+    bottom: calc( 50px - 400px ) !important;
 }
 .rotate {
     transform: rotate(-180deg) !important;

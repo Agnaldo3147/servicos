@@ -84,7 +84,7 @@
         width: 160px;
     }
     .ForgetPassword, .CriarConta {
-        display: none;
+        display: none !important;
     }
     .DivLogo1 {
         margin-left: 10px;
