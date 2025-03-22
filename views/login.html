@@ -10,46 +10,75 @@
     <link rel="stylesheet" href="../assets/css/query/login.css">
     <link rel="stylesheet" href="../assets/css/stylesglobais.css">
     <link rel="shortcut icon" href="{{url('templates/site/')}}" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+   
+    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
 </head>
 <body class="hidden-x">
-
     <header class="width100">
-        <div class="center DivInfo Branco"><span class="material-icons">Info</span></div>
+        <div class="center DivInfo Branco"><i class="fas fa-info-circle"></i>
+        </div>
     </header>
     <main class="center-coluna gap20 main">      
         <section class="SectionForm">
-            <form action="{{url('admin/login')}}" method="post" class="center-coluna" id="form">
-                <div class="DivLogo center">
-                    <p class="Text-Color-Azul">Help</p>
-                </div>
-                <!--
+            <form action="{{url('admin/login')}}" method="post" class="" id="form">
+                <div class="container-input-flash">
+                    <div class="DivLogo1 center">
+                        <h1 class="Text-Color-Azul">Help</h1>
+                    </div>
                     <div class=" width100 center">
                         <p class=" center Text-Color-Vermelho text-align-center alert_senha">{{flash()}}</p>
-    
                         <p class=" center Text-Color-Laranja text-align-center alert_sms"></p>
                     </div>
-                -->
-                <div class="Campo center">
-                    <input type="tel" name="telefone" class="sms_input input_label" id="nome">
-                    <label for="nome" class="label" >Número de telefone</label>
+                    <div class="Campo center">
+                        <input type="tel" name="phone" class="sms_input input_label" id="nome">
+                        <label for="nome" class="label" >Digite seu número de telefone</label>
+                    </div>
+                    <div class="Campo center">
+                        <input type="password" name="password" class="sms_input input_label" id="senha">
+                        <label for="senha" class="label label_senha" >Digite sua senha</label>
+                    </div>
+                    <div class="DivBtn center Azul">
+                        <button type="submit" class="BtnSend Azul-Marinho Text-Color-Branco cursor">
+                            Iniciar Sessão
+                        </button>
+                    </div>
+                   
                 </div>
-                <div class="Campo center">
-                    <input type="password" name="senha" class="sms_input input_label" id="senha">
-                    <label for="senha" class="label label_senha" >Palavra-passe</label>
-                </div>
-                <div class="DivBtn center Azul">
-                    <button type="submit" class="BtnSend Azul-Marinho Text-Color-Branco cursor">
-                        Iniciar Sessão
-                    </button>
-                </div>
-                <div class="ForgetPassword">
-                    <a href="#">Esqueceu a sua senha?</a>
-                </div>
-                <div class="CriarConta">
-                    <p class="opacity75">Já possuis uma conta?</p>
-                    <a href="../views/cadastro_user_pedinte.html" class="Text-Color-Branco Verde-Escuro">Criar conta</a>
+                <!--ESTE SERVE PARA TELASS DE 700PX PARA BAIXO-->
+                <div class="container-forget-password">
+                    <div class="DivLogo2 center">
+                        <h1 class="Text-Color-Azul">Help</h1>
+                    </div>
+                    <div class="ForgetPassword">
+                        <a href="#">Esqueceu a sua senha?</a>
+                    </div>
+                    <div class="CriarConta">
+                        <a href="{{url('create/account')}}" class="Text-Color-Branco ">Criar conta</a>
+                    </div>
                 </div>
             </form>
+            <!--ESTA SECÇÃO SÓ VAI APARACER PARA TELAS MAIORES OU IGUIAS A 1070PX-->
+            <div class="container-forget-passwordd">
+                <div class="ForgetPasswor">
+                    <a href="#">Esqueceu a sua senha?</a>
+                </div>
+                <div class="CriarCont">
+                    <a href="../views/cadastro_user_pedinte.html" class="Text-Color-Branco ">Criar conta</a>
+                </div>
+            </div>
         </section>
         <footer class="center-coluna footer gap10 width100">
             <div class="ContainerFooter gap10 center">
@@ -59,7 +88,7 @@
                 <a href="#" class="font-size08 linkfooter">Ajuda/Suporte</a>
             </div>
             <div class="FromHelp center">
-                <p class="font-size08 opacity75 FromHelp" >@2024 from Help</p>
+                <p class="font-size08 opacity75 FromHelp" >@2025 from Help</p>
             </div>
         </footer>
     </main>

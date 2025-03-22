@@ -1,8 +1,16 @@
 header {
     display: none;
 }
-
-
+.backg-opacity {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(211, 211, 211, 0.53);
+    opacity: .80;
+    display: none;
+}
 
 
 main {
@@ -14,7 +22,7 @@ main {
 
 .SectionForm {
     width: 90%;
-    height: 440px;
+    height: 370px;
     background-color: #FFFFFF;
     border-radius: 10px;
     padding: 3px;
@@ -23,17 +31,30 @@ main {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+.container-input-flash {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
-.DivLogo {
+.DivLogo1 {
     width: 100%;
-    height: 100px;
+    height: 60px;
 }
-.DivLogo p{
-    text-align: center;
-   font-size: 1.5em;
+.DivLogo1 h1, .DivLogo2 h1{
+    font-size: 2.7em;
 }
+.DivLogo2 {
+    width: 100%;
+    display: none !important;
+}
+
 .Campo {
     position: relative;
     width: 100%;
@@ -46,10 +67,12 @@ form {
 .Campo input{
     width: 90%;
     padding: 10px;
-    border-radius: 5px;
-    border: .75px solid black;
+    border-radius: 3px;
+    border: .75px solid rgba(0, 0, 0, 0.776);
+    outline-color: blue;
 }
 .DivBtn {
+    margin-top: 25px;
     width: 100%;
 }
 .DivBtn button{
@@ -59,29 +82,51 @@ form {
     border-radius: 10px;
     font-size: .9em;
 }
-.ForgetPassword {
-    margin-top: 10px;
-    width: 90%;
+.DivBtn button:hover{
+    opacity: .75;
 }
-.ForgetPassword a:hover {
-   color: #000000;
-}
-.CriarConta {
+.container-forget-password {
+    width: 100%;
+    margin-top: -15px;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;
-    gap: 8px;
-    width: 90%;
-    height: 110px;
+    align-items: center;
+    gap: 20px;
 }
-.CriarConta p{
-    font-size: .8em;
+.container-forget-passwordd {
+    margin-top: -15px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    display: none !important;
 }
-.CriarConta a{
-    text-align: center;
-    width: 80px;
+.ForgetPassword, .ForgetPasswor {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.ForgetPassword a, .ForgetPasswor a{
+   margin-left: 10px;
+}
+.ForgetPassword a:hover, .ForgetPasswor a:hover {
+   color: #000000;
+   text-decoration: underline;
+}
+.CriarConta,.CriarCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 20px;
+    padding: 6px;
     border-radius: 5px;
+    background-color: blue;
+}
+
+.CriarConta a, .CriarCont{
+    text-align: center;
     font-size: .8em;
 }
 

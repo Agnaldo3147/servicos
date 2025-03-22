@@ -30,7 +30,7 @@
     .ContainerForm form div input {
         width: 350px;
         padding: 15px;
-        border-radius: 8px;
+        border-radius: 4px;
     }
 
     .ContainerForm form div #ResPesquisa {
@@ -241,7 +241,7 @@
 
 @media screen and (min-width: 750px) {
     .Login {
-        width: 70px;
+        width: 120px;
         border-radius: 13px;
     }
 
@@ -320,7 +320,7 @@
     .ContainerForm form div input {
         width: 420px;
         padding: 15px;
-        border-radius: 8px;
+        border-radius: 4px;
     }
 
     .ContainerForm form div #ResPesquisa {

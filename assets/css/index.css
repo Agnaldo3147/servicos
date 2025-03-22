@@ -41,7 +41,7 @@ header {
 }
 
 .Login {
-    width: 60px;
+    width: 100px;
     border-radius: 10px;
     padding: 3px;
 }
@@ -114,7 +114,9 @@ main .article01 {
     width: 100%;
     padding: 10px;
     border: none;
-    border-radius: 8px;
+    border-radius: 3px;
+    outline-color: blue;
+    caret-color: blue;
 }
 
 .ContainerForm form div #ResPesquisa {

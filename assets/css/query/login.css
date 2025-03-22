@@ -1,8 +1,8 @@
 @media screen and (min-width: 500px) {
     
     .SectionForm {
-        width: 360px;
-        height: 440px;
+        width: 350px;
+        height: 385px;
         border-radius: 10px;
         padding: 3px;
     }
@@ -14,6 +14,13 @@
         width: 90px;
         border-radius: 7px;
         font-size: .9em;
+    }
+}
+@media screen and (min-width: 700px) {
+    
+    .SectionForm {
+        width: 345px;
+        height: 400px;
     }
 }
 @media screen and (min-width: 1070px) {
@@ -37,6 +44,11 @@
         margin-top: 10px;
        
     }
+
+    .backg-opacity {
+        display: block;
+    }
+        
     
     main {
         background-image: url('../query/img/pexels-ketut-subiyanto-4815339.jpg');
@@ -47,13 +59,45 @@
     .SectionForm {
         position: absolute;
         right: 60px;
-        bottom: 60px;
-        width: 360px;
-        height: 430px;
-       
+        top: 100px;
+        width: 680px;
+        height: 380px;
         border-radius: 10px;
         padding: 3px;
         background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    form {
+        width: 100%;
+        flex-direction: row-reverse;
+        gap: 3px;
+    }
+    .container-input-flash {
+        width: calc(100% - 163px);
+        margin-top: 80px;
+    }
+    
+    .container-forget-password {
+        display: block;
+        width: 160px;
+    }
+    .ForgetPassword, .CriarConta {
+        display: none;
+    }
+    .DivLogo1 {
+        margin-left: 10px;
+        display: none !important;
+    }
+    .DivLogo2 {
+        margin-left: 6px;
+        margin-top: -100px;
+        display: flex !important;
+    }
+    /*ESQUECEU A SENHA OARA TELAS GRANDES*/
+    .container-forget-passwordd {
+       display: flex !important;
     }
     footer {
         display: none !important;
