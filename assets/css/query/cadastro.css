@@ -2,8 +2,7 @@
     
     .SectionForm {
         width: 360px;
-        height: 510px;
-       
+        height: 430px;
         border-radius: 10px;
         padding: 3px;
     }
@@ -16,6 +15,16 @@
         border-radius: 7px;
         font-size: .9em;
     }
+}
+@media screen and (min-width: 600px) { 
+    .container-info{
+       border-radius: 15px 15px 0 0;
+    }
+
+    .div-p-info {
+        max-width: 80%;
+    }
+    
 }
 @media screen and (min-width: 1070px) {
     header {
@@ -36,27 +45,47 @@
         margin-right: 20px;
         margin-top: 10px;
     }
+    .backg-opacity {
+        display: block;
+    }
     
     main {
-        background-image: url('../query/img/pexels-ketut-subiyanto-4815339.jpg');
+        background-image: url('../query/img/pexels-cottonbro-4108715.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom center;
     }
+    
     .SectionForm {
         position: absolute;
         right: 60px;
-        bottom: 60px;
-        width: 360px;
-        height: 430px;
+        top: 100px;
+        width: 650px;
+        height: 320px;
         border: none;
         border-radius: 10px;
         padding: 3px;
-        background-color: #FFFFFF;
-        overflow-y: scroll;
-        overflow-x: hidden;
     }
-
+    form{
+        width: 100%;
+        height: 100%;
+        flex-direction: row !important;
+        align-items: stretch !important;
+    }
+    .DivLogo{
+        align-items: stretch !important;
+        justify-content: stretch !important;
+    }
+    .DivLogo h1{
+        margin-left: 3px;
+    }
+    .Prom p {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    .Campo label{
+        font-size: .9em;
+    }
     footer {
         display: none !important;
     }

@@ -12,23 +12,52 @@
 <body>
  
     <div class="backg-opacity"></div>
+    <header class="header">
+        <a href="{{url('')}}" class="Logo" id="logo" style="margin-left: 10px;">
+         <h1 class="Text-Color-Azul"><strong>Help</strong></h1>
+        </a>
+     </header>
+
     <div class="container-autenticate">
-        <div class="logo-help">
-            <h3 class="font-size19 Text-Color-Azul">Help</h3>
-            <p class="prestate">prestacaodeservicos</p>
+        <!--
+            <div class="logo-help">
+                <h2 class="font-size19 Text-Color-Azul">Help</h2>
+            </div>
+        -->
+        <div style="margin-top: 20px;">
+            <p class="info-autenticate">
+                Clique em "Gerar Senha" para receber um código no WhatsApp. Após recebê-lo, digite o código no formulário abaixo para confirmar sua identidade e começar a trabalhar connosco! 🚀
+            </p>
         </div>
-        <p class="info-autenticate">Para poder iniciar sessão e começar a trabalhar na Help, você precisa autenticar sua conta mandando o código de referência gerado abaixo e o comprovativo de pagamento para o nosso WhatsApp. clique no botão abaixo para mandar o código e o comprovativo de pagamento.</p>
-        <div class="senha">
-            {{flash()}}
-        </div>
+        <form action="{{url('admin/register/receive/password')}}" method="post" id="form-send">
+            <div class="div-input">
+                <input type="text" tabindex="1" autocomplete="off" name="s1" id="password" class="password" maxlength="1" required>
+
+                <input type="text" tabindex="2" autocomplete="off" name="s2" id="password"  class="password" maxlength="1" required>
+
+                <input type="text" tabindex="3" autocomplete="off" name="s3" id="password" class="password" maxlength="1" required>
+
+                <input type="text" tabindex="4" autocomplete="off" name="s4" id="password" class="password" maxlength="1" required>
+
+                <input type="text" tabindex="5" autocomplete="off" name="s5" id="password" class="password" maxlength="1" required>
+
+                <input type="text" tabindex="6" autocomplete="off" name="s6" id="password" class="password" maxlength="1" required>
+
+                <input type="tel" name="id" style="display: none !important;" value="{{BuscarUsuario(id).phone}}-{{BuscarUsuario(id).id}}">
+            </div>
+            <div class="btn-submit width100 center">
+                <button type="submit" class="cursor">Enviar</button>
+            </div>
+        </form>
         <button class="btn-wht">
-            <a href="https://whatsapp.web/phone?944025160 ">WhatsApp</a>
+            <a href-whatsapp="{{url('admin/register/generate/password')}}"  target="_blank" id="{{BuscarUsuario(id).phone}}" class="whatsApp generate-password">Gerar Senha</a>
         </button>
     </div>
-    <button class="btn-whatsapp">
-        <a href="https://whatsapp.web/phone?944025160 " target="_blank" class="whatsApp">W</a>
-    </button>
 
+    
+    <div class="ContainerSpinner">
+        <div class="spinner"></div>
+    </div>
      <!--SCRIPTS PARA OS JS-->
 
     <!--ESTILOS BOOTSTRAP-->

@@ -1,41 +1,70 @@
+
 header {
     display: none;
 }
-
+.backg-opacity {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 252, 252, 0.53);
+    opacity: .80;
+    display: none;
+}
 main {
     width: 100vw;
     height: 100vh;
     gap: 20px;
+    /*
     background-color: rgba(211, 211, 211, 0.224);
+    */
+    background-image: linear-gradient(to top,rgba(211, 211, 211, 0.224), rgba(0, 0, 255, 0.534));
 }
 
 .SectionForm {
     width: 90%;
-    height: 510px;
+    height: 380px;
     border-radius: 10px;
     padding: 3px;
-    background-color: #FFFFFF;
+    background-image: linear-gradient(to right,rgba(254, 252, 252, 0.224), #ffffffce);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.098);
+
 }
 
 form {
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+}
+
+
+.container-logo-p {
+
 }
 
 .DivLogo {
     width: 100%;
     height: 80px;
+    margin-bottom: 12px;
 }
-.DivLogo p{
+.DivLogo h1{
     text-align: center;
-   font-size: 1.5em;
+    font-size: 2.7em;
 }
 .Prom {
     width: 100%;
 }
 .Prom p{
     text-align: center;
-    width: 90%;
+    width: 100%;
+    font-weight: 500;
+}
+.container-inputs {
+    gap: 5px;
+    width: 100%;
 }
 .Campo {
     position: relative;
@@ -46,15 +75,18 @@ form {
     left: 7%;
     font-size: .9em;
     opacity: .75;
+    font-size: .8em;
 }
 .Campo input{
     width: 90%;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     border: .75px solid black;
     background-color: #d3d3d360;
+    outline-color: blue;
 }
 .DivBtn {
+    margin-top: 38px;
     width: 100%;
 }
 .DivBtn button{
@@ -63,6 +95,9 @@ form {
     padding: 10px;
     border-radius: 10px;
     font-size: .9em;
+}
+.DivBtn button:hover{
+    opacity: .75;
 }
 
 footer {
@@ -73,7 +108,69 @@ footer {
     text-decoration: underline;
 }
 
+/*CLASS DA MINHA NOTIFICAÇÃO*/
+.div-opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.527);
+    z-index: 2;
+}
+.container-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 400px;
+    background-color: #FFFFFF;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+}
+.div-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+}
+.div-icon:hover {
+    background-color: rgba(211, 211, 211, 0.295);
+}
+.div-icon .fa-times{
+    display: none;
+}
+.div-icon i{
+    font-size: 1.3em;
+    cursor: pointer;
+}
 
+.div-p-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+.div-p-info p {
+    text-align: justify;
+    font-size: .9em;
+}
+
+
+
+.download-information {
+    bottom: calc( 50px - 400px ) !important;
+}
+.rotate {
+    transform: rotate(-180deg) !important;
+}
 
 .Campo_label{
     top: -8px !important;
@@ -95,17 +192,11 @@ footer {
     color: #FFFFFF !important;
 }
 
-
-
-
-
-
 @media screen and (min-width: 500px) {
     
     .SectionForm {
         width: 360px;
-        height: 510px;
-       
+        height: 430px;
         border-radius: 10px;
         padding: 3px;
     }
@@ -138,27 +229,48 @@ footer {
         margin-right: 20px;
         margin-top: 10px;
     }
+    .backg-opacity {
+        display: block;
+    }
     
     main {
-        background-image: url('../query/img/pexels-ketut-subiyanto-4815339.jpg');
+        background-image: url('../img/pexels-tracy-le-blanc-67789-607812.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom center;
     }
+    
     .SectionForm {
         position: absolute;
         right: 60px;
-        bottom: 60px;
-        width: 360px;
-        height: 430px;
+        top: 100px;
+        width: 650px;
+        height: 320px;
         border: none;
         border-radius: 10px;
         padding: 3px;
-        background-color: #FFFFFF;
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
 
+    }
+    form{
+        width: 100%;
+        height: 100%;
+        flex-direction: row !important;
+        align-items: stretch !important;
+    }
+    .DivLogo{
+        align-items: stretch !important;
+        justify-content: stretch !important;
+    }
+    .DivLogo h1{
+        margin-left: 3px;
+    }
+    .Prom p {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    .Campo label{
+        font-size: .9em;
+    }
     footer {
         display: none !important;
     }
