@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{url('templates
     /site/assets/favicon_io/favicon.ico')}}" type="image/x-icon">
-    <title>Cadastro</title>
+    <title>Cadastro dos usuários - Fornecedores</title>
     <link rel="stylesheet" href="../assets/css/cadastro.css">
     <link rel="stylesheet" href="../assets/css/query/cadastro.css">
     <link rel="stylesheet" href="../assets/css/stylesglobais.css">
@@ -18,7 +18,7 @@
     <!--Notificação dos vários cancelamentos
     -->
     <div class="div-opacity"></div>
-        <div class="container-info gap20">
+    <div class="container-info gap20">
             <div class="div-icon width100 cursor">
                 <i class="fas fa-chevron-down rot"></i>
                 <i class="fas fa-times"></i>
@@ -36,12 +36,12 @@
 
                     <p class="p6"></p>
             </div>
-        </div>
+    </div>
 
 
 
     <div class="backg-opacity"></div>
-    {% include 'links.html'%}
+  
     <header class="width100">
         <div class="center DivInfo Branco"><i class="fas fa-info-circle"></i></div>
     </header>
@@ -100,6 +100,21 @@
     <div class="ContainerSpinner">
         <div class="spinner"></div>
     </div>
+
+    <!--SCRIPTS PARA OS JS-->
+
+    <!--ESTILOS BOOTSTRAP-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!--ESTILOS JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!--SCRIPTS DO MAPA-->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="{{url('templates/biblioteca_jquery/jquery-3.7.2.min.js')}}"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
 
     <script src="../assets/js/cadastro.js"></script>
 </body>
