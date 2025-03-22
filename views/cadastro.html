@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{url('templates
     /site/assets/favicon_io/favicon.ico')}}" type="image/x-icon">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="../assets/css/query/cadastro.css">
     <link rel="stylesheet" href="../assets/css/cadastro.css">
+    <link rel="stylesheet" href="../assets/css/query/cadastro.css">
     <link rel="stylesheet" href="../assets/css/stylesglobais.css">
     <link rel="shortcut icon" href="{{url('templates/site/')}}" type="image/x-icon">
 </head>
+
 <body class="hidden-x">
-     <!--Notificação dos vários cancelamentos
+
+    <!--Notificação dos vários cancelamentos
     -->
     <div class="div-opacity"></div>
         <div class="container-info gap20">
@@ -34,87 +37,71 @@
                     <p class="p6"></p>
             </div>
         </div>
-        
+
+
+
+    <div class="backg-opacity"></div>
+    {% include 'links.html'%}
     <header class="width100">
-        <div class="center DivInfo Branco"><span class="material-icons">Info</span></div>
+        <div class="center DivInfo Branco"><i class="fas fa-info-circle"></i></div>
     </header>
-    <main class="center-coluna main">      
+    <main class="center-coluna gap20 main">
         <section class="SectionForm">
-            <form action="{{url('admin/cadastro')}}" method="post" class="center-coluna" id="form">
-                <div class="DivLogo center">
-                    <p class="Text-Color-Azul">Help</p>
+            <form action="{{url('admin/register')}}" method="post" class="" id="form">
+                <div class="container-logo-p">
+                    <div class="DivLogo center">
+                        <h1 class="Text-Color-Azul">Help</h1>
+                    </div>
+                    <div class="center Prom">
+                        <p class="font-size09 opacity75 center">Pronto para transformar sua experiência? Comece agora a trabalhar na Help.</p>
+                    </div>
                 </div>
-                <div class="center Prom">
-                    <p class="font-size09 opacity75 center" >Faça o seu cadastro aqui e comece a ganhar mais dinheiro</p>
+
+                <div class="container-inputs center-coluna">
+                    <div class="center width100">
+                        <p class="font-size08 Text-Color-Laranja center text-align-center" id="alert_sms"></p>
+                    </div>
+                    <div class="Campo center">
+                        <input type="text" name="name" class="input_label" id="nome_ni" required>
+                        <label for="nome_bi" class="label font-size08">Nome completo do BI</label>
+                    </div>
+                    <div class="Campo center">
+                        <input type="number" name="number_bi" class="input_label" id="number_bi" required>
+                        <label for="nome" class="label font-size08">Número do Bilhete de Identidade</label>
+                    </div>
+                    <div class="Campo center">
+                        <input type="tel" name="phone" class="input_label" id="telefone" required>
+                        <label for="telefone" class="label font-size08">Número de telefone</label>
+                    </div>
+
+                    <div class="DivBtn center Azul">
+                        <button type="submit" class="BtnSend Azul-Marinho Text-Color-Branco cursor">
+                            Enviar
+                        </button>
+                    </div>
                 </div>
-                <div class="center width100">
-                    <p class="font-size08 Text-Color-Laranja center text-align-center" id="alert_sms"></p>
-                </div>
-                <div class="Campo center">
-                    <input type="text" name="nome_bi" class="input_label" id="nome_ni" required>
-                    <label for="nome_bi" class="label" >Nome completo do BI</label>
-                </div>
-                <div class="Campo center">
-                    <input type="tel" name="telefone" class="input_label" id="telefone" required>
-                    <label for="telefone" class="label" >Número de telefone</label>
-                </div>
-                <div class="Campo center">
-                    <input type="text" name="nome" class="input_label" id="nome" required>
-                    <label for="nome" class="label" >Nome de utilizador</label>
-                </div>
-                <div class="Campo center">
-                    <input type="password" minlength="4" maxlength="12" name="senha" class="input_label" id="senha" required>
-                    <label for="senha" class="label" >Palavra-passe</label>
-                </div>
-                <div class="Campo center">
-                    <input type="password" minlength="4" maxlength="12" name="confirmar_senha" class="input_label" id="confirmar_senha" required>
-                    <label for="senha" class="label" >Confirmar palavra-passe</label>
-                </div>
-                <div class="Campo width100 center">
-                    <p class="width90 text-align-left font-weight-bold ">Especialidade</p>
-                </div>
-                <div class="Campo width100 center">
-                    <select name="especialidade" id="especialidade" class="width90 border-radius05 padding08" >
-                        <option value="limpeza" selected>Limpeza</option>
-                        <option value="barbeiro">Barbearia(a)</option>
-                        <option value="cabelereiro">Cabelereiro(a)</option>
-                        <option value="manicure">Manicure/Pedicure</option>
-                    </select>
-                </div>
-                <div class="DivBtn center Azul">
-                    <button type="submit" class="BtnSend Azul-Marinho Text-Color-Branco cursor">
-                        Cadastar
-                    </button>
-                </div>
+
             </form>
         </section>
+
+        <footer class="center-coluna footer gap10 width100">
+            <div class="ContainerFooter gap10 center">
+                <a href="#" class="font-size08 linkfooter">Sobre</a>
+                <a href="#" class="font-size08 linkfooter">Termos de uso</a>
+                <a href="#" class="font-size08 linkfooter">Políticas de privacidade</a>
+                <a href="#" class="font-size08 linkfooter">Ajuda/Suporte</a>
+            </div>
+            <div class="FromHelp center">
+                <p class="font-size08 opacity75 FromHelp">@2025 from Help</p>
+            </div>
+        </footer>
     </main>
-    <footer class="center-coluna footer gap10 width100">
-        <div class="ContainerFooter gap10 center">
-            <a href="#" class="font-size08 linkfooter">Sobre</a>
-            <a href="#" class="font-size08 linkfooter">Termos de uso</a>
-            <a href="#" class="font-size08 linkfooter">Políticas de privacidade</a>
-            <a href="#" class="font-size08 linkfooter">Ajuda/Suporte</a>
-        </div>
-        <div class="FromHelp center">
-            <p class="font-size08 opacity75 FromHelp" >@2024 from Help</p>
-        </div>
-    </footer>
-     <!--SCRIPTS PARA OS JS-->
 
-    <!--ESTILOS BOOTSTRAP-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <!--ESTILOS JQUERY-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <!--SCRIPTS DO MAPA-->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
-    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-    <script src="{{url('templates/biblioteca_jquery/jquery-3.7.2.min.js')}}"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+    <div class="ContainerSpinner">
+        <div class="spinner"></div>
+    </div>
 
     <script src="../assets/js/cadastro.js"></script>
 </body>
+
 </html>
