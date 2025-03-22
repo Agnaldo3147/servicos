@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{url('templates
     /site/assets/favicon_io/favicon.ico')}}" type="image/x-icon">
-    <title>Login</title>
+    <title>Iniciar Sessão</title>
     <link rel="stylesheet" href="../assets/css/login.css">
     <link rel="stylesheet" href="../assets/css/query/login.css">
     <link rel="stylesheet" href="../assets/css/stylesglobais.css">
@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
 </head>
 <body class="hidden-x">
+    <div class="backg-opacity"></div>
     <header class="width100">
         <div class="center DivInfo Branco"><i class="fas fa-info-circle"></i>
         </div>
@@ -38,10 +39,7 @@
                     <div class="DivLogo1 center">
                         <h1 class="Text-Color-Azul">Help</h1>
                     </div>
-                    <div class=" width100 center">
-                        <p class=" center Text-Color-Vermelho text-align-center alert_senha">{{flash()}}</p>
-                        <p class=" center Text-Color-Laranja text-align-center alert_sms"></p>
-                    </div>
+                   
                     <div class="Campo center">
                         <input type="tel" name="phone" class="sms_input input_label" id="nome">
                         <label for="nome" class="label" >Digite seu número de telefone</label>
@@ -66,7 +64,7 @@
                         <a href="#">Esqueceu a sua senha?</a>
                     </div>
                     <div class="CriarConta">
-                        <a href="{{url('create/account')}}" class="Text-Color-Branco ">Criar conta</a>
+                        <a href="cadastro_user_pedinte.html" class="Text-Color-Branco ">Criar conta</a>
                     </div>
                 </div>
             </form>
@@ -76,7 +74,7 @@
                     <a href="#">Esqueceu a sua senha?</a>
                 </div>
                 <div class="CriarCont">
-                    <a href="../views/cadastro_user_pedinte.html" class="Text-Color-Branco ">Criar conta</a>
+                    <a href="{{url('create/account')}}" class="Text-Color-Branco ">Criar conta</a>
                 </div>
             </div>
         </section>
@@ -96,6 +94,21 @@
     <div class="ContainerSpinner">
         <div class="spinner"></div>
     </div>
+
+     <!--SCRIPTS PARA OS JS-->
+
+    <!--ESTILOS BOOTSTRAP-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!--ESTILOS JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!--SCRIPTS DO MAPA-->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="{{url('templates/biblioteca_jquery/jquery-3.7.2.min.js')}}"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
 
     <script src="../assets/js/login.js"></script>
 </body>

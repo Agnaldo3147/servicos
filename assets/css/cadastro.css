@@ -102,6 +102,9 @@ form {
 footer {
     padding-bottom: 20px;
 }
+.linkfooter {
+    color: black;
+}
 
 .linkfooter:hover {
     text-decoration: underline;
@@ -166,7 +169,7 @@ footer {
 /*CLASSE PARA BAIXAR A INFORMAÇÃO EXPOSTA*/
 
 .download-information {
-    bottom: calc( 50px - 400px ) !important;
+    bottom: calc( 40px - 400px ) !important;
 }
 .rotate {
     transform: rotate(-180deg) !important;
